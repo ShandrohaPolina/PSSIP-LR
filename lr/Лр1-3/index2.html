@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="rus">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+
+<body>
+    <h1>Продолжение</h1>
+    <p></p>
+    <a href="https://kinogo.org" target="_blank">Фильмы и сериалы</a>
+    <p>Таблица</p>
+    <style>
+        td {
+            width: 100px;
+            height: 100px;
+            border: solid 2px rgb(205, 205, 205);
+            text-align: center;
+            font-size: large;
+        }
+    </style>
+    <table>
+        <tr>
+            <td rowspan="2" style="background-color:rgb(62, 229, 255);">Один</td>
+            <td>Два</td>
+            <td colspan="3" style="background-color:rgb(182, 55, 255);">Девять</td>
+
+        </tr>
+        <tr>
+            <td>Два</td>
+            <td style="background-color:rgb(62, 229, 255);">Три</td>
+            <td>Два</td>
+            <td>Пять</td>
+        </tr>
+        <tr>
+            <td>Семь</td>
+            <td style="background-color:rgb(53, 255, 117);">Четыре</td>
+            <td>Пять</td>
+            <td colspan="2" style="background-color:rgb(182, 55, 255);">Десять</td>
+        </tr>
+        <tr>
+            <td style="background-color:rgb(53, 255, 117);">Один</td>
+            <td>Один</td>
+            <td>Два</td>
+            <td>Три</td>
+            <td rowspan="2" style="background-color:rgb(62, 229, 255);">Ноль</td>
+        </tr>
+        <tr>
+            <td>Четыре</td>
+            <td>Пять</td>
+            <td style="background-color:rgb(53, 255, 117);">Шесть</td>
+            <td>Одиннадцать</td>
+        </tr>
+    </table>
+    <div>&&&&&&##$%^&*()*&^%$#@</div>
+    <h2>Опрос</h2>
+    <h3>Укажите пол</h3>
+    <p>
+        <input type="radio" value="man" name="gender" />мужской
+    </p>
+    <p>
+        <input type="radio" value="woman" name="gender" />женский
+    </p>
+    <p><input type="text" name="userName" placeholder="Введите имя" size="18" /></p>
+    <p><input type="text" name="userPhone" placeholder="Введите номер телефона" size="18" maxlength="11" /></p>
+    <h3>Как вы любите проводить свободное время?</h3>
+    <form>
+        <p>
+            <input type="checkbox" name="raz" />Гулять
+        </p>
+        <p>
+            <input type="checkbox" name="dva" />Спать
+        </p>
+        <p>
+            <input type="checkbox" name="tri" />Читать
+        </p>
+        <p>
+            <input type="checkbox" name="chet" />Ничего из выше перечисленного
+        </p>
+        <p><input type="password" name="password" placeholder="Введите пароль" /></p>
+
+
+        <p><input list="AList" type="text" name="model" placeholder="Любимая пора года" /></p>
+        <p>
+            <label for="date">Ваша любимая дата: </label>
+            <input type="date" id="date" name="date" />
+        </p>
+        <p>
+            <label for="age">Возраст: </label>
+            <input type="number" step="1" min="1" max="100" value="1" id="age" name="age" />
+        </p>
+        <p>
+            <label for="price">Как Вы оцениваете профессию программиста:</label>
+            1<input type="range" step="1" min="0" max="100" value="10" id="price" name="price" />100
+        </p>
+        <p>
+
+        <p>
+            <button type="submit">Отправить</button>
+        </p>
+    </form>
+    <datalist id="AList">
+        <option value="Лето"></option>
+        <option value="Осень"></option>
+        <option value="Зима"></option>
+        <option value="Весна"></option>
+    </datalist>
+
+    <a href="http://127.0.0.1:5500/index.html">Назад</a>
+</body>
+
+</html>

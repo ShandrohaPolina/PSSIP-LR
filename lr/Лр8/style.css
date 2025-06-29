@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    flex: 1;
+}
+
+#main>#core {
+    flex: 1;
+    display: flex;
+    order: 1;
+    flex-direction: column;
+}
+
+#main>#left {
+    width: auto;
+    display: flex;
+    order: -1;
+    flex-direction: column;
+    flex: 0 0 15vw;
+}
+
+#main>#aside {
+    width: auto;
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    flex: 0 0 20vw;
+}
+
+#aside>#oneside {
+    width: auto;
+    flex: 67%;
+    background: rgb(235, 121, 255);
+}
+
+#aside>#twoside {
+    width: auto;
+    flex: 33%;
+    background: rgb(181, 37, 206);
+}
+
+#left>#navi {
+    flex: 34%;
+    background: rgb(235, 121, 255);
+}
+
+#left>#under_navi {
+    flex: 34%;
+    background: rgb(213, 164, 255);
+}
+
+#left>#bolt_navi {
+    flex: 34%;
+    background: rgb(252, 214, 255);
+}
+
+#core>#core1 {
+    height: auto;
+    flex: 67%;
+    display: flex;
+    background: rgb(250, 234, 253);
+    flex-direction: column;
+}
+
+#core>#core2 {
+    flex: 33%;
+    display: flex;
+    padding: 0;
+}
+
+#core2>#core2_1 {
+    height: auto;
+    width: auto;
+    flex: 50%;
+    background: rgb(116, 0, 162);
+    color: #c85bdb;
+
+}
+
+#core2>#core2_2 {
+    width: auto;
+    flex: 50%;
+    background: rgb(174, 68, 255);
+
+}
+
+/*размер, цвет, цвет шрифта подвала и шапки*/
+header,
+footer {
+    background: rgb(43, 0, 60);
+    height: 10vh;
+    color: #d87eff;
+}
+
+header,
+footer,
+#navi,
+#under_navi,
+#core1,
+#core2_1,
+#core2_2,
+#bolt_navi,
+#oneside,
+#twoside {
+    padding: 1em;
+    /* отступ от края для содержимого */
+}
+
+
+
+/* Мобильные устройства */
+@media (max-width: 760px) {
+    #main {
+        flex-direction: column;
+    }
+
+    #main>#left,
+    #main>#aside {
+        display: none;
+    }
+
+    #core>#core2 {
+        flex: 0 0 32vw;
+        display: flex;
+        padding: 0;
+    }
+
+}
+
+/* Планшеты */
+@media (min-width: 771px) and (max-width: 1024px) {
+
+    #main>#left {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 22vw;
+    }
+
+    #main>#aside {
+        display: flex;
+        order: 2;
+        flex-direction: column;
+        flex: 0 0 22vw;
+    }
+
+    #aside>#twoside,
+    #core2>#core2_2 {
+        display: none;
+    }
+
+}

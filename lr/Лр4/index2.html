@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="rus">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <!-- Внутренняя таблица стилей -->
+    <style>
+        /* Простой селектор атрибута */
+        Q[title] {
+            color: maroon;
+            /* Цвет текста */
+        }
+
+        /* Соседние селекторы */
+        B+I {
+            color: red;
+            /* Красный цвет текста */
+        }
+
+        /* Импортирование шрифтов Google */
+        @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+        p {
+            font-family: 'Tektur';
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+
+        body {
+            background-color: rgb(212, 177, 255);
+        }
+
+        table {
+            border: 10px solid rgb(147, 58, 255);
+            border-spacing: 3px;
+            border-collapse: separate;
+            empty-cells: hide;
+        }
+
+        td {
+            width: 100px;
+            height: 100px;
+            border: solid 2px rgb(179, 58, 255);
+            text-align: center;
+            font-size: large;
+        }
+
+        /* Стилизация кнопок */
+        .button {
+            background-color: #490084;
+            /* Цвет фона кнопки */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        @keyframes backgroundColorAnimation {
+            from {
+                background-color: red;
+            }
+
+            30% {
+                background-color: rgb(255, 136, 0);
+            }
+
+            70% {
+                background-color: rgb(239, 250, 33);
+            }
+
+            to {
+                background-color: red;
+            }
+        }
+
+        @keyframes textColorAnimation {
+            from {
+                color: #9900ff;
+            }
+
+            25% {
+                color: rgb(71, 215, 255);
+            }
+
+            50% {
+                color: rgb(255, 0, 76);
+            }
+
+            75% {
+                color: rgb(255, 85, 255);
+            }
+
+            to {
+                color: #9900ff;
+
+            }
+        }
+
+        /* вычисляемые */
+        div {
+            background-color: #cd2626;
+
+            margin: 5px;
+            padding: 40px 10px;
+            box-sizing: border-box;
+            border: 5px solid #840044;
+            display: inline-block;
+            background-position: calc(100% - 20px) 0;
+        }
+
+        .rotated {
+
+            transform: rotate(30deg);
+        }
+
+        /* относительные  */
+        .doubleScale {
+            background-color: #7b0743;
+            width: 120px;
+            height: 120px;
+            margin: 3px;
+            padding: 40px 10px;
+            box-sizing: border-box;
+            border: 5px solid #59002e;
+            display: inline-block;
+            transform: scale(0.5);
+        }
+
+        /* Псевдокласс */
+        div:hover {
+            animation-name: backgroundColorAnimation;
+            animation-duration: 5s;
+        }
+
+        a {
+            color: #9900ff;
+
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            animation-name: textColorAnimation;
+            animation-duration: 5s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Продолжение</h1>
+    <p></p>
+    <p>текст <b>Первый</b> текст<i>Второй</i> текст</p>
+    <p>текст <i>Третий</i> текст</p>
+    <p></p>
+    <p>И мы продолжаем <q>нашу работу</q> в этом HTML <q title="Заголовок цитаты"></q> И ИДЕМ дальше</p>
+    <p></p>
+    <div>ANIMATION</div>
+    <p></p>
+    <a href="https://kinogo.org" target="_blank">Фильмы и сериалы</a>
+    <p>Таблица</p>
+    <table>
+
+        <tr>
+            <td rowspan="2" style="background-color:rgb(62, 229, 255);">Один</td>
+            <td>Два</td>
+            <td colspan="3" style="background-color:rgb(182, 55, 255);">Девять</td>
+
+        </tr>
+        <tr>
+            <td>Два</td>
+            <td style="background-color:rgb(62, 229, 255);">Три</td>
+            <td>Два</td>
+            <td>Пять</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="background-color:rgb(53, 255, 117);">Четыре</td>
+            <td></td>
+            <td colspan="2" style="background-color:rgb(182, 55, 255);">Десять</td>
+        </tr>
+        <tr>
+            <td style="background-color:rgb(53, 255, 117);">Один</td>
+            <td>Один</td>
+            <td></td>
+            <td>Три</td>
+            <td rowspan="2" style="background-color:rgb(62, 229, 255);">Ноль</td>
+        </tr>
+        <tr>
+            <td>Четыре</td>
+            <td>Пять</td>
+            <td style="background-color:rgb(53, 255, 117);">Шесть</td>
+            <td></td>
+        </tr>
+    </table>
+    <p></p>
+    <div></div>
+
+    <div class="doubleScale"></div>
+    <div class="rotated">&&&#$%^&*()*^%$#@</div>
+
+    <h2>Опрос</h2>
+    <h3>Укажите пол</h3>
+    <p>
+        <input type="radio" value="man" name="gender" />мужской
+    </p>
+    <p>
+        <input type="radio" value="woman" name="gender" />женский
+    </p>
+    <p><input type="text" name="userName" placeholder="Введите имя" size="18" /></p>
+    <p><input type="text" name="userPhone" placeholder="Введите номер телефона" size="18" maxlength="11" /></p>
+    <h3>Как вы любите проводить свободное время?</h3>
+    <form class="form-container">
+        <p>
+            <input type="checkbox" name="raz" />Гулять
+        </p>
+        <p>
+            <input type="checkbox" name="dva" />Спать
+        </p>
+        <p>
+            <input type="checkbox" name="tri" />Читать
+        </p>
+        <p>
+            <input type="checkbox" name="chet" />Ничего из выше перечисленного
+        </p>
+        <p><input type="password" name="password" placeholder="Введите пароль" /></p>
+
+
+        <p><input list="AList" type="text" name="model" placeholder="Любимая пора года" /></p>
+        <p>
+            <label for="date">Ваша любимая дата: </label>
+            <input type="date" id="date" name="date" />
+        </p>
+        <p>
+            <label for="age">Возраст: </label>
+            <input type="number" step="1" min="1" max="100" value="1" id="age" name="age" />
+        </p>
+        <p>
+            <label for="price">Как Вы оцениваете профессию программиста:</label>
+            1<input type="range" step="1" min="0" max="100" value="10" id="price" name="price" />100
+        </p>
+        <p>
+
+        <p>
+            <button type="submit" class="button">Отправить</button>
+        </p>
+    </form>
+    <datalist id="AList">
+        <option value="Лето"></option>
+        <option value="Осень"></option>
+        <option value="Зима"></option>
+        <option value="Весна"></option>
+    </datalist>
+
+    <a href="http://127.0.0.1:5500/index.html">Назад</a>
+</body>
+
+</html>

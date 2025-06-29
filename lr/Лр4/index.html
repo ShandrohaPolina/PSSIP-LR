@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="rus">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <!-- Внутренняя таблица стилей -->
+    <style>
+        /* Универсальный селектор */
+        * {
+            background-color: rgb(223, 198, 254);
+            font-family: 'Celtes';
+        }
+
+        /* Классы */
+        .roundi {
+            border-radius: 50%;
+            /* Круглое изображение */
+            box-shadow: 0 15px 8px rgba(0, 0, 0, 0.2);
+            /* Тень для изображения */
+        }
+
+        .bord {
+            border: 10pt solid;
+            border-color: blueviolet;
+        }
+
+        @font-face {
+            font-family: 'Celtes';
+            src: url(fonts/ofont.ru_Celtes.ttf);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Bubble';
+            src: url(fonts/ofont.ru_Bubblez.ttf);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Селекторы тегов */
+        p {
+            font-family: 'Bubble';
+        }
+
+        ul {
+            list-style-image: url(image/111.png);
+        }
+
+        .block {
+            font-style: italic;
+        }
+
+
+        /*идентификатор*/
+        #fonti {
+            text-decoration: underline;
+
+        }
+
+        .gradient-image {
+            width: 400px;
+            height: 400px;
+            background-image: linear-gradient(rgb(255, 0, 251), rgba(0, 0, 135, 0.761))
+        }
+
+        /* Дочерние селекторы */
+        p>b {
+            color: red;
+        }
+    </style>
+    <!-- Внешний файл CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Резюме студента</h1>
+    <p><a href="top"></a></p>
+    <table>
+        <tr>
+            <td rowspan="9"><img src="image/фото.jpg" alt=""></td>
+            <td id="fonti"><b>Шандроха Полина Викторовна</b></td>
+        </tr>
+        <tr>
+            <td><b>Желаемая должность:</b> разработчик игр</td>
+        </tr>
+        <tr>
+            <td><b>Желаемый уровень дохода:</b> 2500 рублей</td>
+        </tr>
+        <tr>
+            <td class="block">Дата рождения: 11.09.2006 г.</td>
+        </tr>
+        <tr>
+            <td>Место проживания: аг. Обухово</td>
+        </tr>
+        <tr>
+            <td>Контактная информация:</td>
+        </tr>
+        <tr>
+            <td>Телефон: +375295580242</td>
+        </tr>
+        <tr>
+            <td>Электронная почта: yaustala17@gmail.com</td>
+        </tr>
+    </table>
+    <p>Идем дальше<sub>Хоба, нижний индекс!</sub></p>
+    <p>Идем назад<sup>Хоба, верхний индекс!</sup></p>
+    <p>X<sub>i</sub> = Y<sup><small>2</small></sup> + Z<sup><small>2</small></sup></p>
+    <img src="image/фото.jpg" alt="" class="roundi">
+    <p></p>
+    <img src="image/фото.jpg" alt="" class="bord">
+    <p></p>
+    <div class="gradient-image"></div>
+    <p><b>Ключевые знания и навыки:</b></p>
+    <ul>
+        <li style="font-weight: 800;">Умение работать в команде</li><!--жирный-->
+        <li style="text-decoration: line-through">Обучаемость и адаптивность</li> <!--зачёркнутый-->
+        <li>Знание языков программирования, таких как HTML, Python, C# </li>
+        <li>Знания игрового движка Unity</li>
+        <li>Знание инструментов разработки, таких как Visual Studio, Git, GitHub, Adobe Photoshop</li>
+    </ul>
+    <p><b>Образование:</b></p>
+    <div>Гродненский государственный политехнический колледж 2022-2026</div>
+    <p><i>Любимые блюда и напитки:</i></p>
+    <ol>
+        <li>Хлопья с молоком</li>
+        <li>Какао</li>
+    </ol>
+    <p><del>Хобби:</del></p>
+    <ol style="list-style-type:upper-roman;">
+        <li>Кушать</li>
+        <li>Спать</li>
+        <li>Печатать</li>
+    </ol>
+    <p><b>Видео:</b></p>
+
+    <video src="media/Vanitas.mp4" width="600" height="500" poster="image/oblojka.jpg" controls></video>
+    <p></p>
+    <audio src="media/Мемуары_Ванитаса.mp3" controls></audio>
+    <div>Мемуары Ванитаса</div>
+    <audio src="media/Love_nwantiti.mp3" controls></audio>
+    <div>Love nwantiti</div>
+    <audio src="media/Fate_Stay_Night.mp3" controls></audio>
+    <div>Fate Stay Night</div>
+    <audio src="media/Aurora-Runaway.mp3" controls></audio>
+    <div>Runaway</div>
+    <p></p>
+    <p></p>
+    <a href="#top">Наверх</a>
+    <p></p>
+    <a href="http://127.0.0.1:5500/index2.html">Далее</a>
+
+</body>
+
+</html>

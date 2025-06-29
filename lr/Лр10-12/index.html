@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №10-12</title>
+    <!-- Задание 1: Работа с объектом Date -->
+    <script>
+        function showCurrentTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            alert("Текущее время: " + hours + ":" + minutes + ":" + seconds);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Вариант №38</h1>
+    <h1>Задание №1</h1>
+    <button onclick="showCurrentTime()">Показать год</button>
+    <hr>
+    <!-- Задание 2: Работа с операторами организации циклов -->
+    <h1>Задание №2</h1>
+    <script>
+        var surname = "Шандроха";
+        var name = "Полина";
+        var n = 18;
+        for (var i = 0; i < n + 5; i++) {
+            document.write(i + ". " + surname + " " + name + "<br>");
+        }
+    </script>
+    <hr>
+    <!-- Задание 3: Работа с объектом Array -->
+    <h1>Задание №3</h1>
+    <script>
+        var array = [1, 2, 3, 4, 5, 6, 7];
+        var Count = 0;
+        var maxElement = array[0];
+
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] % 2 === 0) {
+                Count++;
+            }
+            if (array[i] > maxElement) {
+                maxElement = array[i];
+            }
+        }
+
+        document.write("Исходный массив: " + array + "<br>");
+        document.write("Количество четных элементов: " + Count + "<br>");
+        document.write("Максимальный элемент: " + maxElement + "<br>");
+    </script>
+    <hr>
+    <!-- Работа с объектом Math -->
+    <h1>Задание №4</h1>
+    <p>Расчет по формуле y = (√(16 - x²)) / (x - 2)</p>
+    <script src="math.js"></script>
+    <label for="inputX">Введите значение x:</label>
+    <input type="number" id="inputX">
+    <button onclick="calculate()">Рассчитать</button>
+    <p id="res"></p>
+
+    <hr>
+    <h1>Задание №5</h1>
+    <script>
+        // Задание 5: Работа со строками STRING
+        const S1 = "Шандроха";
+        const S2 = "Беларусь, Гродненая область, Гродненский район, аг. Обухово";
+
+        const lengthS2 = S2.length;
+        const reverse = S1.split('').reverse().join('');
+        const low = S2.toLowerCase();
+
+        document.write("Длина строки S2: " + lengthS2 + "<br>");
+        document.write("Строка S1 в обратном порядке:" + reverse + "<br>");
+        document.write("Строка S2 в нижнем регистре: " + low + "<br>");
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №6</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        #main {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 250px 500px 500px 280px;
+            grid-template-rows: 90px 215px 215px 215px 90px;
+            grid-template-areas:
+                "header header header header"
+                "navi core1 core1 oneside"
+                "under_navi core1 core1 oneside"
+                "bolt_navi core2_1 core2_2 twoside"
+                "footer footer footer footer";
+        }
+
+        header {
+            grid-area: header;
+            background: rgb(43, 0, 60);
+            color: #d87eff;
+        }
+
+        #navi {
+            grid-area: navi;
+            background: rgb(235, 121, 255);
+        }
+
+        #under_navi {
+            grid-area: under_navi;
+            background: rgb(213, 164, 255);
+        }
+
+        #bolt_navi {
+            grid-area: bolt_navi;
+            background: rgb(252, 214, 255);
+        }
+
+        #oneside {
+            grid-area: oneside;
+            background: rgb(235, 121, 255);
+        }
+
+        #twoside {
+            grid-area: twoside;
+            background: rgb(181, 37, 206);
+        }
+
+        #core1 {
+            grid-area: core1;
+            display: flex;
+            background: rgb(250, 234, 253);
+        }
+
+        #core2_1 {
+            grid-area: core2_1;
+            background: rgb(116, 0, 162);
+            color: #c85bdb;
+
+        }
+
+        #core2_2 {
+            grid-area: core2_2;
+            background: rgb(174, 68, 255);
+        }
+
+        footer {
+            grid-area: footer;
+            background: rgb(43, 0, 60);
+            color: #d87eff;
+        }
+
+        header,
+        footer,
+        #navi,
+        #under_navi,
+        #core1,
+        #core2_1,
+        #core2_2,
+        #bolt_navi,
+        #oneside,
+        #twoside {
+            padding: 1em;
+            /* отступ от края для содержимого */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <header>Шапка (1)</header>
+        <div id="core1">(9)</div>
+        <div id="core2_1">(7)</div>
+        <div id="core2_2">(8)</div>
+        <div id="navi">Навигация (4)</div>
+        <div id="under_navi">Под навигацией (5)</div>
+        <div id="bolt_navi">Под навигацией-2 (6)</div>
+        <div id="oneside">(2)</div>
+        <div id="twoside">(3)</div>
+        <footer>Подвал (10)</footer>
+    </div>
+
+</body>
+
+</html>

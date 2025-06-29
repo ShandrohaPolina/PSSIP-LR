@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №9</title>
+    <style>
+        * {
+            background-color: rgb(226, 196, 255);
+            padding: 5px;
+        }
+    </style>
+    <!--№4.1 внутренний файл  -->
+    <script>
+        // сигнальное окно alert
+        alert("Сигнальное окно для начала лабораторной работы №9");
+        document.write("Данная страница демонстрирует работу JS");
+    </script>
+
+    <!--диалоговое окно promt() -->
+    <script>
+        function show_prompt() {
+            var name = prompt("Пожалуйста, введите ваше имя", "Кто-то");
+            if (name != null && name != "")
+                document.write("Привет " + name + "! Как дела сегодня ? ");
+        }
+    </script>
+    <!-- confirm во внешнем файле -->
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+
+    <!-- №4.2 Подключение внешнего файла. -->
+    <script src="script.js"></script>
+
+
+    <!-- №4.3 Обработчики событий в HTML -->
+    <!-- диалоговое окно alert() -->
+    <div><button onClick="alert('Ну вот вы и нажали на кнопку. Какие были ожидания?')">CLICK ME!</button></div>
+
+    <!-- Для confirm -->
+    <input type="button" onclick="show_confirm()" value="Хотите увидеть магию?">
+    <hr>
+    <!-- Для  promt()-->
+    <input type="button" onclick="show_prompt()" value="Хотите увидеть науку?">
+    <!-- Оператор if -->
+    <script>
+        //Выводит приветствие Доброе утро если время меньше чем 10
+        var d = new Date();
+        var time = d.getHours();
+        if (time < 9) {
+            document.write("<b>Доброе утро</b>");
+        }
+        // else {
+        //     document.write("<i>Доброе Не утро...</i>");
+        // }
+    </script>
+    <hr>
+    <!-- Оператор  switch-->
+    <script>
+        // Вы получите различные приветствия в зависимости от того, какой сейчас день недели. Заметьте, что Воскресенье=0, Понедельник=1, Вторник=2, и т.д.
+        var d = new Date();
+        var theDay = d.getDay();
+        switch (theDay) {
+            case 1:
+                document.write("Господи, оно опять...");
+            case 5:
+                document.write("Неужели Пятница?");
+                break;
+            case 6:
+                document.write("Давай, я жду вечера Субботы");
+                break;
+            case 0:
+                document.write("Сонное Воскресенье...");
+                break;
+            default:
+                document.write("Когда же наступят выходные!?");
+        }
+    </script>
+    <hr>
+    <!-- цикл for -->
+    <!-- Continue -->
+    <script>
+        var i = 0;
+        for (i = 0; i <= 5; i++) {
+            if (i == 3)
+                continue;
+            document.write("Число i = " + i);
+            document.write("<br>")
+        }
+    </script>
+    <hr>
+    <!-- цикл while -->
+    <!-- Break -->
+    <script>
+        var b = 0;
+        while (b <= 5) {
+            document.write("Число b = " + b);
+            document.write("<br>")
+            b++;
+            if (b == 3) break;
+        }
+    </script>
+
+    <hr>
+    <!-- цикл do while -->
+    <script>
+        var b1 = 0;
+        do {
+            document.write("Число b1 = " + b1);
+            document.write("<br>")
+            b1++;
+        }
+        while (b1 <= 5) 
+    </script>
+    <hr>
+    <!-- диалоговое окно confirm() -->
+    <a href="" onclick="return confirm('Вы уверены что хотите удалить страницу?')">Удалить </a>
+    <br>
+
+
+    <!-- №4.4 URL-схема "JavaScript:" -->
+    <FORM METHOD=post NAME="form" ACTION="JavaScript:form.e.value='Вы нажали кнопку Заполнить';void(0);">
+        <INPUT TYPE=text NAME=e SIZE=50 VALUE=""><BR>
+        <INPUT TYPE=submit VALUE="Заполнить">
+        <INPUT TYPE=reset VALUE="Очистить">
+    </FORM>
+
+</body>
+
+
+</html>

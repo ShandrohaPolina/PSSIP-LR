@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №13-14 Вариант №45</title>
+    <link rel="stylesheet" href="forma.css">
+    <style>
+        .t1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            align-self: center;
+        }
+
+        .t2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: 86%;
+            align-self: center;
+        }
+
+        label {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .fon {
+            max-width: 800px;
+            height: auto;
+        }
+
+        form {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            /* width: 70%; */
+            grid-template-columns: 25% 65%;
+            gap: 25px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            max-width: 90%;
+            border-radius: 8px;
+            border: 3px solid rgb(192, 192, 192);
+
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 8px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            /* width: 100%; */
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        textarea {
+            grid-column: 1 / -1;
+            width: 70%;
+            justify-self: right;
+        }
+
+        #but {
+            padding: 10px;
+            background-color: #0f79e9;
+            color: white;
+            font-size: 1em;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            justify-self: right;
+            width: 70%;
+            grid-column: 1 / -1;
+        }
+
+        #element2 {
+            transition: all 0.3s ease;
+        }
+
+        #element2:hover {
+            color: rgb(0, 0, 159);
+            font-weight: bold;
+            font-family: 'Verdana', sans-serif;
+            font-size: 25px;
+            border: 1px solid green;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>Шандроха Полина Викторовна</p>
+    <a href="https://jut.su/anime/">Ссылка на любимый сайт</a>
+    <br>
+    <img src="carta.jpg" alt="">
+    <br>
+    <!-- Задание 2 -->
+    <div id="element2">Элемент №2</div>
+    <button id="show-url">Посмотреть URL</button>
+    <br>
+    <script>
+        document.getElementById('show-url').addEventListener('click', function () {
+            const currentUrl = window.location.href;
+
+            document.getElementById('element2').innerText = currentUrl;
+        });
+        document.getElementById('element2').addEventListener('click', function () {
+            this.remove();
+        });
+    </script>
+
+
+    <!-- Задание 4 -->
+    <button id="show-computer-name">Показать имя компьютера</button>
+
+    <script>
+        document.getElementById('show-computer-name').addEventListener('click', function () {
+            const newWindow = window.open('', '', 'width=300,height=500,scrollbars=yes,status=no');
+            newWindow.document.write('<h1>Имя компьютера:</h1>');
+            newWindow.document.write('<p>' + window.navigator.userAgent + '</p>');
+            newWindow.document.close();
+        });
+    </script>
+    <!-- Валидация -->
+    <div class="fon">
+        <h1 class="t1">Форма обратной связи</h1>
+        <p class="t2">Пожалуйста, помогите нам улучшить предлагаемые условия. Вы можете использовать форму ниже, чтобы
+            задать вопрос, сообщить о проблеме или сделать предложение о наших услугах, веб-сайте или промо-акциях.</p>
+        <form id="feedback-form">
+            <label for="first-name">Имя:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Ivan" required>
+
+            <label for="last-name">Фамилия:</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Ivanov" required>
+
+            <label for="email">Эл. почта:</label>
+            <input type="email" id="email" name="email" placeholder="ivan@example.com" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+8 800 200 86 47" required>
+
+            <label for="country">Страна:</label>
+            <select id="country" name="country" required>
+                <option value="" disabled selected>Выберите страну</option>
+                <option value="Belarus">Беларусь</option>
+                <option value="Russia">Россия</option>
+                <option value="Ukraine">Украина</option>
+                <option value="Other">Другие</option>
+            </select>
+
+            <textarea id="message" name="message" placeholder="Напишите ваше сообщение здесь" required></textarea>
+
+            <button type="submit" id="but">Отправить сообщение</button>
+        </form>
+    </div>
+
+
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let valid = true;
+            const inputs = [
+                { id: 'first-name', maxLength: 30 },
+                { id: 'last-name', maxLength: 30 },
+                { id: 'email', maxLength: 50 },
+                { id: 'phone', maxLength: 20 },
+                { id: 'message', maxLength: 500 }
+            ];
+
+            inputs.forEach(input => {
+                const field = document.getElementById(input.id);
+                field.classList.remove('error');
+                if (!field.value.trim()) {
+                    field.classList.add('error');
+                    valid = false;
+                } else if (field.value.length > input.maxLength) {
+                    field.classList.add('error');
+                    valid = false;
+                }
+            });
+
+            if (!valid) {
+                alert('Пожалуйста, исправьте ошибки в форме.');
+            } else {
+                alert('Форма успешно отправлена!');
+                // Здесь можно добавить код для отправки формы
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
