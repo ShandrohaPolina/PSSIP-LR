@@ -7,6 +7,7 @@
     <title>Лабораторная работа №8</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="forma.css">
+    <link rel="stylesheet" href="script.js">
     <style>
     </style>
 </head>
@@ -22,33 +23,35 @@
                 <div class="fon">
                     <h1 class="t1">Форма обратной связи</h1>
                     <p class="t2">Пожалуйста, помогите нам улучшить предлагаемые условия. Вы можете использовать форму
-                        ниже,
-                        чтобы
+                        ниже, чтобы
                         задать вопрос, сообщить о проблеме или сделать предложение о наших услугах, веб-сайте или
                         промо-акциях.</p>
-                    <form>
+                    <form id="feedback-form">
                         <label for="first-name">Имя:</label>
-                        <input type="text" id="first-name" name="first-name" placeholder="Ivan">
+                        <input type="text" id="first-name" name="first-name" placeholder="Ivan" required>
 
                         <label for="last-name">Фамилия:</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="Ivanov">
+                        <input type="text" id="last-name" name="last-name" placeholder="Ivanov" required>
 
                         <label for="email">Эл. почта:</label>
-                        <input type="email" id="email" name="email" placeholder="ivan@example.com">
+                        <input type="email" id="email" name="email" placeholder="ivan@example.com" required>
 
                         <label for="phone">Телефон:</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+8 800 200 86 47">
+                        <input type="tel" id="phone" name="phone" placeholder="+8 800 200 86 47" required>
 
                         <label for="country">Страна:</label>
-                        <select id="country" name="country">
-                            <option value="Belarus" selected>Ukraine</option>
-                            <option value="Russia">Russia</option>
-                            <option value="Ukraine">Belarus</option>
-                            <option value="Other">???</option>
+                        <select id="country" name="country" required>
+                            <option value="" disabled selected>Выберите страну</option>
+                            <option value="Belarus">Беларусь</option>
+                            <option value="Russia">Россия</option>
+                            <option value="Ukraine">Украина</option>
+                            <option value="Other">Другие</option>
                         </select>
-                        <textarea id="message" name="message" placeholder="Напишите ваше сообщение здесь"></textarea>
 
-                        <button type="submit">Отправить сообщение</button>
+                        <textarea id="message" name="message" placeholder="Напишите ваше сообщение здесь"
+                            required></textarea>
+
+                        <button type="submit" id="but">Отправить сообщение</button>
                     </form>
                 </div>
 
@@ -102,6 +105,41 @@
         </div>
     </div>
     <footer>Подвал (10)</footer>
+
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let valid = true;
+            const inputs = [
+                { id: 'first-name', maxLength: 30 },
+                { id: 'last-name', maxLength: 30 },
+                { id: 'email', maxLength: 50 },
+                { id: 'phone', maxLength: 20 },
+                { id: 'message', maxLength: 500 }
+            ];
+
+            inputs.forEach(input => {
+                const field = document.getElementById(input.id);
+                field.classList.remove('error');
+                if (!field.value.trim()) {
+                    field.classList.add('error');
+                    valid = false;
+                } else if (field.value.length > input.maxLength) {
+                    field.classList.add('error');
+                    valid = false;
+                }
+            });
+
+            if (!valid) {
+                alert('Пожалуйста, исправьте ошибки в форме.');
+            } else {
+                alert('Форма успешно отправлена!');
+                // Здесь можно добавить код для отправки формы
+            }
+        });
+    </script>
+
 </body>
 
 </html>

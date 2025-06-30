@@ -60,7 +60,7 @@ button {
     justify-self: right;
 }
 
-button {
+#but {
     padding: 10px;
     background-color: #0f79e9;
     color: white;
@@ -70,6 +70,10 @@ button {
     cursor: pointer;
     /* width: 60%; */
     justify-self: right;
+}
+
+.error {
+    color: red;
 }
 
 /* button:hover {
