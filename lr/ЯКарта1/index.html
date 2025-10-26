@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff6f6;
+        }
+
+        .form-cont {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            background-color: #ffd5d5;
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #ff984e;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            width: 50%;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            cursor: pointer;
+
+        }
+
+        button:hover {
+            background-color: #f35c3a;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ffcfcf;
+
+        }
+
+        .required::after {
+            content: " *";
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <div class="form-cont">
+        <h2>Онлайн заказ</h2>
+        <form action="orderForm">
+            <div class="form_group">
+                <label for="name" class="required" minlength="2" maxlength="50">Имя:</label>
+                <input type="text" id="name" name="name">
+                <div class="error" id="nameError"></div>
+            </div>
+
+            <div class="form_group">
+                <label for="email" class="required">Адрес email:</label>
+                <input type="text" id="email" name="email">
+                <div class="error" id="emailError"></div>
+            </div>
+
+            <div class="form_group">
+                <label for="dost" class="required">Адрес доставки:</label>
+                <input type="text" id="dost" name="dost">
+                <div class="error" id="dostError"></div>
+            </div>
+
+            <div class="form_group">
+                <label for="phone" class="required">Контактный телефон:</label>
+                <input type="tel" id="phone" name="phone" required pattern="\+375\(\d{2}\)\d{3}-\d{2}-\d{2}"
+                    placeholder="+375(XX)XXX-XX-XX">
+                <div class="error" id="phoneError"></div>
+            </div>
+
+            <div class="form_group">
+                <label for="id" class="required">ID продукта:</label>
+                <input type="text" id="productId" name="productId" required pattern="[A-Z]{2}-\d{4}"
+                    placeholder="AB-1234">
+                <div class="error" id="productIdError"></div>
+            </div>
+
+            <div class="form_group">
+                <label for="infa">Подробная информация о заказе</label>
+                <textarea id="infa" name="infa" rows="8" placeholder="Дополнительная информация о заказе"></textarea>
+            </div>
+
+            <div class="form_group">
+                <label for="num" class="required">Число с картинки:</label>
+                <input type="text" id="num" name="num">
+                <div class="error" id="numError"></div>
+            </div>
+
+            <img src="images (1).jpg" alt="" style="width: 200px;">
+            <p></p>
+            <button type="submit">Отправить</button>
+            <p></p>
+            <button type="button">Очистить форму</button>
+            <p></p>
+            <button type="button" id="cleany">Очистить файлы</button>
+
+        </form>
+
+        <div id="output">
+            <h3>Данные из Local Storage:</h3>
+            <pre id="storageData"></pre>
+        </div>
+    </div>
+</body>
+
+</html>
