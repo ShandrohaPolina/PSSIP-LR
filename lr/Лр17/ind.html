@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Примеры интерфейсных событий</title>
+    <style>
+        #dropZone {
+            width: 300px;
+            height: 200px;
+            border: 2px dashed #ccc;
+            margin-top: 20px;
+        }
+
+        #scrollable {
+            width: 300px;
+            height: 100px;
+            overflow-y: scroll;
+            border: 1px solid #000;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Примеры интерфейсных событий</h1>
+
+    <!-- События мыши -->
+    <div class="box" id="mouseEventBox">Наведи на меня</div>
+    <p id="mouseEventOutput"></p>
+
+    <!-- События клавиатуры -->
+    <input type="text" id="keyboardInput" placeholder="Введите текст">
+    <p id="keyboardOutput"></p>
+
+    <!-- Drag&DROP события -->
+    <div id="dropZone">Перетащите сюда</div>
+    <div class="box" draggable="true" id="draggableBox">Перетащи меня</div>
+
+    <!-- События полосы прокрутки -->
+    <div id="scrollable">
+        <p>Содержимое...</p>
+        <p>Содержимое...</p>
+        <p>Содержимое...</p>
+        <p>Содержимое...</p>
+        <p>Содержимое...</p>
+    </div>
+
+    <!-- События сенсорных экранов -->
+    <div id="touchArea" style="width: 300px; height: 200px; background-color: lightgreen; margin-top: 20px;">
+        Коснитесь меня
+    </div>
+
+    <!-- События, связанные с таймером -->
+    <button id="startTimerButton">Запустить таймер</button>
+    <p id="timerOutput"></p>
+
+    <script>
+        // События мыши
+        const mouseEventBox = document.getElementById('mouseEventBox');
+        const mouseEventOutput = document.getElementById('mouseEventOutput');
+
+        mouseEventBox.addEventListener('mouseover', () => {
+            mouseEventOutput.textContent = 'Вы навели мышь!';
+        });
+
+        mouseEventBox.addEventListener('mouseout', () => {
+            mouseEventOutput.textContent = 'Вы убрали мышь!';
+        });
+
+        // События клавиатуры
+         const keyboardInput = document.getElementById('keyboardInput');
+            const keyboardOutput = document.getElementById('keyboardOutput');
+
+            keyboardInput.addEventListener('input', () => {
+                keyboardOutput.textContent = 'Вы ввели: ' + keyboardInput.value;
+            });
+
+        // Drag&DROP события
+        const dropZone = document.getElementById('dropZone');
+        const draggableBox = document.getElementById('draggableBox');
+
+        draggableBox.addEventListener('dragstart', (event) => {
+            event.dataTransfer.setData('text/plain', 'Это перетаскиваемый элемент');
+        });
+
+        dropZone.addEventListener('dragover', (event) => {
+            event.preventDefault(); // Разрешить сброс
+        });
+
+        dropZone.addEventListener('drop', (event) => {
+            event.preventDefault();
+            alert(event.dataTransfer.getData('text/plain'));
+        });
+
+        // События полосы прокрутки
+        const scrollable = document.getElementById('scrollable');
+
+        scrollable.addEventListener('scroll', () => {
+            console.log('Прокрутка произошла!');
+        });
+
+        // События сенсорных экранов
+        const touchArea = document.getElementById('touchArea');
+
+        touchArea.addEventListener('touchstart', () => {
+            alert('Сенсорный экран был коснут!');
+        });
+
+        // События, связанные с таймером
+        const timerOutput = document.getElementById('timerOutput');
+        let timer;
+
+        document.getElementById('startTimerButton').addEventListener('click', () => {
+            // Останавливаем предыдущий таймер, если он был запущен
+            if (timer) {
+                clearInterval(timer);
+            }
+
+            let count = 0;
+            timerOutput.textContent = 'Таймер запущен!';
+
+            timer = setInterval(() => {
+                count++;
+                timerOutput.textContent = 'Секунд прошло: ' + count;
+
+                // Останавливаем таймер через 10 секунд
+                if (count >= 10) {
+                    clearInterval(timer);
+                    timerOutput.textContent += ' Таймер остановлен!';
+                }
+            }, 1000);
+        });
+    </script>
+    <a href="index.html">Индивидуально взято</a>
+</body>
+
+</html>

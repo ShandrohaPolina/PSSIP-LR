@@ -1,0 +1,3161 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts\ofont.ru_Roboto.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes textColorAnimation {
+    from {
+        color: #9900ff;
+    }
+
+    25% {
+        color: rgb(71, 215, 255);
+    }
+
+    50% {
+        color: rgb(255, 0, 76);
+    }
+
+    75% {
+        color: rgb(255, 85, 255);
+    }
+
+    to {
+        color: #9900ff;
+
+    }
+}
+
+header a:hover {
+    animation-name: textColorAnimation;
+    animation-duration: 5s;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+
+header {
+    padding: 20px 0px;
+    background: rgb(255, 255, 255);
+}
+
+header nav {
+    float: right;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.catalog-button {
+    display: none;
+    font-size: 12px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+.btn a {
+    background: #C4C4C4;
+    padding: 15px 20px;
+
+    transition: all 500ms ease;
+}
+
+.btn a:hover {
+    background: #898989;
+
+}
+
+.container {
+    width: 1152px;
+    margin: 0 auto;
+}
+
+/* 
+._ibg {
+    position: relative;
+} */
+
+/* ._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+} */
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+}
+
+under_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px;
+    padding-bottom: 20px;
+}
+
+.group1 {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 13px;
+}
+
+.text-group p {
+    margin: 0;
+}
+
+.group2 {
+    display: flex;
+    align-items: center;
+}
+
+.phone {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* MAIN------------------------------------------------------- */
+.page {
+    flex: 1 1 auto;
+}
+
+
+/* -------------------------------------- */
+
+.flex-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(196, 196, 196, 1);
+}
+
+.to {
+    font-size: 22px;
+    color: rgba(255, 0, 0, 1);
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.image-wrapper img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+
+.ser {
+    font-size: 18px;
+    background-color: rgba(184, 184, 184, 1);
+    padding: 5px 20px;
+    margin-top: 40px;
+    margin-left: -25px;
+    width: fit-content;
+}
+
+.prev-button,
+.next-button {
+    margin: 5px;
+}
+
+/* ------------------------------------------------------- */
+.main-banner {
+    display: flex;
+    align-items: center;
+    background-color: #727270;
+    background-size: cover;
+    background-position: center;
+    height: 81px;
+}
+
+.cat {
+    background-color: rgba(196, 196, 196, 1);
+    padding: 10px 50px 10px 10px;
+}
+
+.poisk {
+    height: 30px;
+    width: 572px;
+    background-color: rgba(196, 196, 196, 1);
+}
+
+.block-1 {
+    position: relative;
+    background-image: url('Image/Group 257.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 524px;
+    /*  */
+    perspective: 1000px;
+    /* Устанавливаем перспективу для 3D эффекта */
+}
+
+.main-block_title,
+.main-block_title-2 {
+    display: inline-block;
+    /* Чтобы применить трансформацию */
+    transition: transform 0.5s ease, color 0.5s ease;
+    /* Плавный переход */
+}
+
+.go {
+    display: none;
+}
+
+.main-block_title {
+    font-size: 34px;
+    line-height: 137%;
+    font-weight: 800;
+    color: white;
+}
+
+.main-block_title-2 {
+    font-size: 60px;
+    font-weight: 800;
+    color: white;
+    max-width: 800px;
+}
+
+.main-block_body:hover .main-block_title {
+    transform: rotateY(40deg) translateZ(100px);
+}
+
+.main-block_body:hover .main-block_title-2 {
+    transform: rotateY(-200deg) translateZ(10px);
+
+}
+
+.main-block_body {
+    padding: 155px 0px 20px;
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.buttn {
+    margin-top: 80px;
+}
+
+.buttn a {
+    background: #C4C4C4;
+    padding: 15px 20px;
+    transition: all 500ms ease;
+
+}
+
+.main-block_but {
+    font-size: 22px;
+    padding: 10px 20px;
+    box-shadow: 5px 5px 5px rgb(53, 53, 53);
+}
+
+.main-block_but:hover {
+    background: #898989;
+}
+
+/*  */
+.suggestions {
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    z-index: 1000;
+    background-color: white;
+    width: calc(100% - 2px);
+    /* Чтобы соответствовать ширине поля ввода */
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+/*KATALOG ------------------------------------ */
+
+.katalog {
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 359px 359px 359px;
+    grid-template-rows: 40px 183px 70px;
+    column-gap: 38px;
+    row-gap: 19px;
+    grid-template-areas:
+        "nothing nothing in_kat "
+        "plit cer oboi"
+        "smesi baget mat";
+}
+
+.nothing {
+    grid-area: nothing;
+    background: white;
+    font-size: 28px;
+}
+
+.in_kat {
+    grid-area: in_kat;
+    justify-self: end;
+
+}
+
+.baton {
+    background: #C4C4C4;
+    padding: 15px 25px;
+    box-shadow: 5px 5px 5px rgb(53, 53, 53);
+}
+
+.bo:hover {
+    background: linear-gradient(to right, rgb(221, 172, 222), rgb(95, 202, 255), rgb(221,
+                172,
+                222));
+}
+
+
+.plit {
+    grid-area: plit;
+    background: rgba(196, 196, 196, 1);
+}
+
+.cer {
+    grid-area: cer;
+    background: rgba(196, 196, 196, 1);
+}
+
+.oboi {
+    grid-area: oboi;
+    background: rgba(196, 196, 196, 1);
+}
+
+.smesi {
+    grid-area: smesi;
+    background: rgba(196, 196, 196, 1);
+}
+
+.baget {
+    grid-area: baget;
+    background: rgba(196, 196, 196, 1);
+}
+
+.mat {
+    grid-area: mat;
+    background: rgba(196, 196, 196, 1);
+}
+
+.big_text {
+
+    font-size: 22px;
+    margin-left: 25px;
+    margin-top: 32%;
+}
+
+.small_text {
+    font-size: 14px;
+    margin-left: 25px;
+    margin-top: 1.5%;
+}
+
+.sred_text {
+    font-size: 20px;
+    margin-left: 25px;
+    margin-top: 6%;
+}
+
+
+
+.scale-up {
+    transform: scale(1.1);
+    /* Увеличение блока на 10% */
+    transition: transform 0.3s ease;
+    /* Плавный переход для увеличения */
+    position: relative;
+    /* Для правильного отображения псевдоэлементов */
+    z-index: 1;
+    /* Чтобы блок был выше других элементов */
+}
+
+.gradient {
+    position: absolute;
+    /* Абсолютное позиционирование для псевдоэлемента */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    opacity: 0;
+    /* Изначально невидимый */
+    transition: opacity 0.3s ease;
+    /* Плавный переход для появления градиента */
+    z-index: -1;
+    /* Чтобы градиент был под содержимым блока */
+}
+
+.scale-up .gradient {
+    opacity: 1;
+    /* Градиент становится видимым при увеличении блока */
+}
+
+
+/* BREND------------------------------------------------------------------ */
+.brend {
+    justify-content: center;
+    padding-top: 44px;
+    padding-bottom: 44px;
+    margin-top: 42px;
+    margin-bottom: 50px;
+
+    background-color: rgba(244, 244, 244, 1);
+    height: 100%;
+    width: 1152px;
+    display: grid;
+    grid-template-columns: 98px 98px 98px 98px 98px 98px 98px 98px 98px;
+    grid-template-rows: 98px;
+    column-gap: 22px;
+    grid-template-areas:
+        "brend-n brend-n brend-n brend-n brend-n brend-n brend-n brend-n brend-n";
+}
+
+.brend-n {
+    grid-area: brend-n;
+    height: auto;
+    width: auto;
+    margin-left: 38px;
+    margin-right: 38px;
+}
+
+.brendik {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    margin-top: 50px;
+}
+
+.prev-but {
+    margin: 10px;
+    margin-top: 10px;
+    height: 30px;
+    width: 30px;
+
+}
+
+.next-but {
+    margin: 10px;
+    margin-top: 10px;
+    height: 30px;
+    width: 30px;
+
+}
+
+/*BLOCK-2 -------------------------------------------------------------------- */
+
+.block-2 {
+    background-color: white;
+    margin-top: 40px;
+}
+
+nav_us {
+    width: 100%;
+    margin-top: 50px;
+}
+
+nav_us ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    margin-top: 50px;
+}
+
+nav_us ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav_us ul li img {
+    margin-right: 10px;
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+.pod {
+    margin-top: 3px;
+    font-size: 11px;
+    color: rgba(62, 62, 62, 1);
+}
+
+.ko {
+    display: none;
+}
+
+.co {
+    display: block;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+    /* Скрываем по умолчанию */
+    z-index: 1000;
+    white-space: nowrap;
+    /* Запрет на перенос текста */
+}
+
+
+/*BLOCK-3 -------------------------------------------------------------------- */
+
+.block-3 {
+    background-color: rgba(244, 244, 244, 1);
+
+}
+
+.novinki {
+    justify-content: center;
+    padding-bottom: 56px;
+    margin-bottom: 47px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 359px 754px;
+    grid-template-rows: 40px 233px 233px;
+    column-gap: 37px;
+    row-gap: 54px;
+    grid-template-areas:
+        "nov vsenov"
+        "first big-first"
+        "second big-first"
+    ;
+}
+
+.nov {
+    grid-area: nov;
+    font-size: 28px;
+    margin-top: 40px;
+}
+
+.vsebaton {
+    background: #C4C4C4;
+    padding: 13px 25px;
+    box-shadow: 5px 5px 5px rgb(53, 53, 53);
+    width: fit-content;
+    cursor: pointer;
+}
+
+.vsenov {
+    grid-area: vsenov;
+    justify-self: end;
+    margin-top: 40px;
+
+}
+
+.first {
+    grid-area: first;
+    height: auto;
+    position: relative;
+}
+
+.big-first {
+
+    grid-area: big-first;
+    height: auto;
+    position: relative;
+}
+
+.second {
+    grid-area: second;
+    height: auto;
+    position: relative;
+}
+
+.first img,
+.second img,
+.big-first img {
+    width: auto;
+    height: auto;
+
+}
+
+.heart {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+}
+
+.country {
+    float: left;
+    margin: 5px;
+}
+
+.bigotexo {
+    font-size: 22px;
+}
+
+.text-overlay p {
+    margin: 6px;
+}
+
+/* PERFECT */
+.first,
+.second,
+.big-first {
+    position: relative;
+
+}
+
+.first::after,
+.second::after,
+.big-first::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 24px;
+    font-size: 14px;
+    left: 24px;
+    color: white;
+    z-index: 2;
+}
+
+
+
+/*BLOCK-4 ------------------------------------------------------- */
+.block-4 {
+    background-color: rgb(255, 255, 255);
+    margin-top: 47px;
+}
+
+.popularity {
+    justify-content: center;
+    padding-bottom: 40px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 359px 359px 359px;
+    grid-template-rows: 40px 233px 233px 40px;
+
+    column-gap: 28px;
+    row-gap: 40px;
+    grid-template-areas:
+        "popu popu vsekoll"
+        "sample mono simple"
+        "somple mano semple"
+        "poput poput vsekoli"
+    ;
+}
+
+.popu {
+    grid-area: popu;
+    font-size: 28px;
+}
+
+.poput {
+    grid-area: poput;
+    font-size: 28px;
+}
+
+
+.vsekoll {
+    grid-area: vsekoll;
+    justify-self: end;
+
+}
+
+.vsekoli {
+    grid-area: vsekoli;
+    justify-self: end;
+
+}
+
+.sample {
+    grid-area: sample;
+    height: auto;
+    position: relative;
+}
+
+.mono {
+    grid-area: mono;
+    height: auto;
+    position: relative;
+}
+
+.simple {
+    grid-area: simple;
+    height: auto;
+    position: relative;
+}
+
+.somple {
+    grid-area: somple;
+    height: auto;
+    position: relative;
+}
+
+.semple {
+    grid-area: semple;
+    height: auto;
+    position: relative;
+}
+
+.mano {
+    grid-area: mano;
+    height: auto;
+    position: relative;
+}
+
+.sample,
+.mano,
+.semple,
+.somple,
+.simple,
+.mono {
+    position: relative;
+}
+
+.sample::after,
+.mano::after,
+.semple::after,
+.somple::after,
+.simple::after,
+.mono::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+/*BLOCK-5 ------------------------------------------------------- */
+
+.block-5 {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    margin-top: 50px;
+}
+
+.korzina {
+    justify-content: center;
+    padding-top: 44px;
+    padding-bottom: 44px;
+    margin-top: 42px;
+    margin-bottom: 50px;
+
+    background-color: rgba(242, 242, 242, 1);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 260px 260px 260px 260px;
+    grid-template-rows: 98px;
+    column-gap: 22px;
+    grid-template-areas:
+        "cup cup cup cup"
+    ;
+}
+
+.cup {
+    grid-area: cup;
+}
+
+.prev-but,
+.next-but {
+    margin: 10px;
+    margin-top: 120px;
+}
+
+/* ----------------------------------------- */
+
+.popular-products {
+    width: 100%;
+    height: 603px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(242, 242, 242, 1);
+    padding: 20px;
+}
+
+.product {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: white;
+}
+
+.product-00 {
+    width: 260px;
+    height: 360px;
+    margin: 1%;
+    vertical-align: top;
+    margin-top: 30px;
+}
+
+.product-info {
+    text-align: center;
+}
+
+.product-info p {
+    margin: 5px 0;
+}
+
+
+.price-cart {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgba(196, 196, 196, 1);
+    padding: 10px;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 25px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.add-to-cart {
+    background-color: rgba(255, 218, 218, 1);
+    color: rgba(243, 79, 79, 1);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-to-cart:hover {
+    background-color: rgba(243, 79, 79, 1);
+    color: rgba(255, 218, 218, 1);
+}
+
+.hea {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.products-container {
+    display: flex;
+    gap: 20px;
+}
+
+.clickable-image {
+    border-radius: 15px;
+}
+
+/*BLOCK-6 ------------------------------------------------------- */
+
+.block-6 {
+    display: flex;
+    column-gap: 40px;
+    width: 100%;
+}
+
+.block {
+    background-color: rgba(196, 196, 196, 1);
+    width: 282px;
+    height: 204px;
+    margin-top: 52px;
+    transition: background-color 0.5s ease;
+    /* Плавный переход цвета */
+}
+
+.block-gradient {
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5));
+    /* Градиент */
+}
+
+.block-bottom {
+    background-color: rgba(196, 196, 196, 1);
+    width: 282px;
+    height: 204px;
+    margin-top: 31px;
+    margin-bottom: 388px;
+    transition: background-color 0.5s ease;
+}
+
+.block-bottom-gradient {
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5));
+    /* Градиент */
+}
+
+.us_text {
+    padding-top: 142px;
+    padding-left: 19px;
+    width: 240px;
+
+}
+
+.usu_text {
+    padding-top: 129px;
+    padding-left: 19px;
+    width: 240px;
+}
+
+
+/* BLOCK-7------------------------------------------------------- */
+.block-7 {
+    display: flex;
+    column-gap: 13px;
+    width: 100%;
+    margin-right: 92px;
+}
+
+.bl-1 {
+
+    width: 550px;
+    height: 396px;
+    margin-right: 47px;
+    margin-top: -10px;
+
+}
+
+.bl-2 {
+    width: 365px;
+    height: 396px;
+
+}
+
+.bl-3 {
+
+    margin-bottom: 6px;
+}
+
+.bl-3 img,
+.bl-2 img {
+    cursor: pointer;
+    transition: transform 0.2s;
+    /* Плавное увеличение при наведении */
+}
+
+.bl-3 img:hover {
+    transform: scale(1.1);
+    /* Увеличение при наведении */
+}
+
+.bl-2 img:hover {
+    transform: scale(1.1);
+    /* Увеличение при наведении */
+}
+
+
+.omag {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: none;
+}
+
+
+
+
+
+/*BLOCK-8 ------------------------------------------------------- */
+
+.block-8 {
+    width: 100%;
+    margin-top: 74px;
+    margin-bottom: 56px;
+    background-color: #fff;
+}
+
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 31px;
+}
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.but-1 {
+    width: 30px;
+    margin: 170px 30px;
+}
+
+.but-2 {
+    width: 30px;
+    margin: 170px 15px;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    width: 519px;
+    height: 349px;
+    padding-top: 30px;
+    padding-left: 21px;
+    background-color: rgba(236, 236, 236, 1);
+}
+
+.revim {
+    width: 86px;
+    height: 81px;
+    margin-right: 23px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.review-content {
+    flex: 1;
+}
+
+.review-content p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding-left: 20px;
+    width: 500px;
+}
+
+.rating span {
+    color: #ffcc00;
+    font-size: 18px;
+}
+
+
+
+
+
+/*BLOCK-9 ------------------------------------ */
+
+.block-9 {
+    position: relative;
+    background-color: white;
+}
+
+.imo {
+    display: block;
+    margin: 10px auto 20px;
+}
+
+.blick {
+    position: absolute;
+    width: 500px;
+    height: 345px;
+    background-color: white;
+    top: 50px;
+    left: 300px;
+}
+
+.blick-2 {
+    margin-left: 43px;
+    margin-top: 32px;
+
+}
+
+.blii {
+    position: absolute;
+    width: 290px;
+    height: 42px;
+    background-color: white;
+    top: 32%;
+    left: 60%;
+}
+
+.blii-2 {
+    margin-left: 40px;
+    margin-top: 11px;
+}
+
+/* BLOCK-10------- */
+
+/* .block-10 {
+    display: flex;
+    width: 100%;
+    margin-top: 31px;
+    margin-bottom: 25px;
+}
+
+.bl-01 {
+    display: flex;
+    flex-direction: column;
+}
+
+.bl-01:last-child {
+    display: flex;
+    align-items: end;
+}
+
+last {
+    margin-left: 3px;
+    font-size: 32px;
+}
+
+.bl-01 p {
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.bl-01 u {
+    font-size: 15px;
+    padding-bottom: 20px;
+} */
+
+
+.block-10 {
+    display: flex;
+    flex-wrap: wrap;
+    /* Позволяет элементам переноситься на новую строку */
+    width: 100%;
+    margin-top: 31px;
+    margin-bottom: 25px;
+}
+
+.bl-01 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* Позволяет элементам занимать равное пространство */
+}
+
+.bl-01:last-child {
+    display: flex;
+    align-items: end;
+}
+
+last {
+    margin-left: 3px;
+    font-size: 32px;
+}
+
+.bl-01 p {
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.bl-01 u {
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+/* FOOTER----------------------------------------------- */
+.niz {
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 50px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 87% 13%;
+    grid-template-rows: 30px;
+    column-gap: 22px;
+    grid-template-areas:
+        "nazv cnopka";
+}
+
+.nazv {
+    grid-area: nazv;
+    font-size: 14px;
+}
+
+.cnopka {
+    grid-area: cnopka;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 25px;
+    background-color: #ffffff;
+    border: 1.5px solid black;
+    border-radius: 3px;
+    width: fit-content;
+}
+
+/* .knoppop {
+    padding: 5px 25px;
+    background-color: #ffffff;
+    border: 1.5px solid black;
+    border-radius: 3px;
+} */
+
+/* --------------------------------- */
+
+.sidebar {
+    position: fixed;
+    left: -500px;
+    /* Скрываем меню за пределами экрана */
+    top: 0;
+    width: 327px;
+    height: 100%;
+    background-color: rgba(196, 196, 196, 1);
+    transition: left 0.3s ease;
+    /* Плавное появление */
+    z-index: 10;
+    box-shadow: 20px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+
+    /* Убираем отступы */
+}
+
+.sidebar ul hr {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li {
+    margin-left: 10px;
+    margin-top: 15px;
+    /* margin: 15px 0; */
+}
+
+.hob {
+    padding-left: 25px;
+    width: 253px;
+    font-size: 17px;
+}
+
+.sidebar ul li div {
+    background-color: white;
+    padding: 15px 80px 15px 80px;
+    margin-left: 40px;
+    width: fit-content;
+}
+
+/* ADAPTACIA-------------------------------------- */
+
+/* Мобильная версия */
+@media (max-width: 360px) {
+
+    /* BURGER */
+    .hamburger {
+        /* width: 30px; */
+        /* height: 3px; */
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .catalog-button {
+        display: flex;
+        /* display: inline-block; */
+        /* text-align: center; */
+        margin-top: 0px;
+    }
+
+    .ho {
+        width: 150px;
+    }
+
+    .header-menu {
+        display: none;
+        /* Скрыть меню */
+    }
+
+    /* ------------- */
+
+    .wrapper {
+        min-height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+        width: 334px;
+        margin: 0 auto;
+    }
+
+
+
+
+
+    /*  */
+    /*  */
+    /*  */
+
+
+
+
+    under_nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1px;
+        padding-bottom: 20px;
+    }
+
+    .group1 {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        margin-right: 13px;
+        width: 185px;
+        height: 22px;
+    }
+
+    .text-group p {
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .group2 {
+        display: none;
+    }
+
+    .phone {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    /* MAIN------------------------------------------------------- */
+    .page {
+        flex: 1 1 auto;
+    }
+
+
+    /* -------------------------------------- */
+
+    .image-container {
+        display: none;
+        /* Скрываем все контейнеры изображений */
+    }
+
+    .hoho {
+        display: block;
+    }
+
+    .flex-images {
+        justify-content: center;
+    }
+
+    .prev-button,
+    .next-button {
+        display: inline-block;
+    }
+
+    /* ------------------------------------------------------- */
+    .main-banner {
+        display: flex;
+        align-items: center;
+        background-color: #727270;
+        background-size: cover;
+        background-position: center;
+        height: 81px;
+    }
+
+    .main-banner p {
+        display: none;
+    }
+
+    .cat {
+        background-color: rgba(196, 196, 196, 1);
+        padding: 10px 10px 10px 10px;
+    }
+
+    .poisk {
+        display: none;
+        height: 30px;
+        width: 300px;
+        background-color: rgba(196, 196, 196, 1);
+    }
+
+    .go {
+        display: block;
+    }
+
+    .goo {
+        display: none;
+    }
+
+    .block-1 {
+        position: relative;
+        background-image: url('Image/Group 257.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 423px;
+    }
+
+    .main-block_title {
+        font-size: 14px;
+        line-height: 137%;
+        font-weight: 800;
+        color: white;
+    }
+
+    .main-block_title-2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: white;
+        max-width: 800px;
+    }
+
+    .main-block_body {
+        padding: 155px 0px 20px;
+        position: relative;
+        z-index: 2;
+        color: white;
+    }
+
+    .buttn {
+        margin-top: 80px;
+    }
+
+    .buttn a {
+        background: #C4C4C4;
+        padding: 15px 20px;
+        transition: all 500ms ease;
+
+    }
+
+    .main-block_but {
+        font-size: 22px;
+        padding: 10px 20px;
+    }
+
+    .main-block_but:hover {
+        background: #898989;
+    }
+
+    /*KATALOG ------------------------------------ */
+
+    .katalog {
+        justify-content: start;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 359px;
+        grid-template-rows: 40px 183px 183px 183px 70px 70px 70px;
+        grid-template-areas:
+            "nothing"
+            "plit"
+            "cer"
+            "oboi"
+            "smesi "
+            "baget"
+            "mat"
+        ;
+    }
+
+    .nothing {
+        grid-area: nothing;
+        background: white;
+        font-size: 28px;
+    }
+
+    .in_kat {
+        grid-area: in_kat;
+        justify-self: end;
+    }
+
+    .baton {
+        background: #C4C4C4;
+        padding: 15px 25px;
+    }
+
+    .plit {
+        grid-area: plit;
+        background: rgba(196, 196, 196, 1);
+    }
+
+    .cer {
+        grid-area: cer;
+        background: rgba(196, 196, 196, 1);
+    }
+
+    .oboi {
+        grid-area: oboi;
+        background: rgba(196, 196, 196, 1);
+    }
+
+    .smesi {
+        grid-area: smesi;
+        background: rgba(196, 196, 196, 1);
+    }
+
+    .baget {
+        grid-area: baget;
+        background: rgba(196, 196, 196, 1);
+    }
+
+    .mat {
+        grid-area: mat;
+        background: rgba(196, 196, 196, 1);
+    }
+
+    .big_text {
+
+        font-size: 22px;
+        margin-left: 25px;
+        margin-top: 32%;
+    }
+
+    .small_text {
+        font-size: 14px;
+        margin-left: 25px;
+        margin-top: 1.5%;
+    }
+
+    .sred_text {
+        font-size: 20px;
+        margin-left: 25px;
+        margin-top: 6%;
+    }
+
+    /* BREND------------------------------------------------------------------ */
+    .brend {
+        justify-content: center;
+        padding-top: 44px;
+        padding-bottom: 44px;
+        margin-top: 42px;
+        margin-bottom: 50px;
+
+        background-color: rgba(244, 244, 244, 1);
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 98px 98px 98px 98px 98px 98px 98px 98px 98px;
+        grid-template-rows: 98px;
+        column-gap: 22px;
+        grid-template-areas:
+            "brend-n brend-n brend-n brend-n brend-n brend-n brend-n brend-n brend-n";
+    }
+
+    .brend-n {
+        grid-area: brend-n;
+        height: auto;
+        width: auto;
+        margin-left: 38px;
+        margin-right: 38px;
+    }
+
+    .brendik {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        margin-top: 50px;
+    }
+
+    .prev-but,
+    .next-but {
+        margin: 10px;
+        margin-top: 120px;
+        height: 30px;
+        width: 30px;
+    }
+
+    /*BLOCK-2 -------------------------------------------------------------------- */
+
+    .block-2 {
+        background-color: white;
+        margin-top: 40px;
+    }
+
+    nav_us {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .co {
+        display: none;
+    }
+
+    nav_us ul {
+        list-style: none;
+        padding-bottom: 30px;
+        margin-top: 50px;
+        display: block;
+    }
+
+    nav_us ul li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    nav_us ul li img {
+        margin-right: 10px;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    .pod {
+        margin-top: 3px;
+        font-size: 11px;
+        color: rgba(62, 62, 62, 1);
+    }
+
+    .ko {
+        display: block;
+    }
+
+    /*BLOCK-3 -------------------------------------------------------------------- */
+
+    .block-3 {
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    .novinki {
+        justify-content: start;
+        padding-bottom: 56px;
+        margin-bottom: 47px;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 359px;
+        grid-template-rows: 40px 233px 233px 262px;
+        column-gap: 37px;
+        row-gap: 54px;
+        grid-template-areas:
+            "nov"
+            "first"
+            "second"
+            "big-first"
+        ;
+    }
+
+    .nov {
+        grid-area: nov;
+        font-size: 28px;
+        margin-top: 40px;
+    }
+
+    .vsebaton {
+        background: #C4C4C4;
+        padding: 13px 25px;
+    }
+
+    .vsenov {
+        grid-area: vsenov;
+        justify-self: end;
+        margin-top: 40px;
+
+    }
+
+    .first {
+        grid-area: first;
+        height: auto;
+        position: relative;
+    }
+
+    .big-first {
+
+        grid-area: big-first;
+        height: auto;
+        position: relative;
+    }
+
+    .second {
+        grid-area: second;
+        height: auto;
+        position: relative;
+    }
+
+    .first img,
+    .second img,
+    .big-first img {
+        width: auto;
+        height: auto;
+
+    }
+
+    .heart {
+        position: absolute;
+        top: 14px;
+        right: 16px;
+    }
+
+    .country {
+        float: left;
+        margin: 5px;
+    }
+
+    .bigotexo {
+        font-size: 22px;
+    }
+
+    .text-overlay p {
+        margin: 6px;
+    }
+
+    /* PERFECT */
+    .first,
+    .second,
+    .big-first {
+        position: relative;
+
+    }
+
+    .first::after,
+    .second::after,
+    .big-first::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        z-index: 1;
+    }
+
+    .text-overlay {
+        position: absolute;
+        bottom: 24px;
+        font-size: 14px;
+        left: 24px;
+        color: white;
+        z-index: 2;
+    }
+
+
+
+    /*BLOCK-4 ------------------------------------------------------- */
+    .block-4 {
+        background-color: rgb(255, 255, 255);
+        margin-top: 47px;
+    }
+
+    .popularity {
+        justify-content: start;
+        padding-bottom: 40px;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 359px;
+        grid-template-rows: 40px 233px 233px 233px;
+        row-gap: 30px;
+        grid-template-areas:
+            "popu"
+            "sample"
+            "somple"
+            "mono"
+        ;
+    }
+
+    .popu {
+        grid-area: popu;
+        font-size: 28px;
+        background-color: rgba(196, 196, 196, 1);
+
+    }
+
+    .sample {
+        grid-area: sample;
+        height: auto;
+        position: relative;
+    }
+
+    .mono {
+        grid-area: mono;
+        height: auto;
+        position: relative;
+    }
+
+    .somple {
+        grid-area: somple;
+        height: auto;
+        position: relative;
+    }
+
+    .semple {
+        grid-area: semple;
+        height: auto;
+        position: relative;
+    }
+
+    .sample,
+    .mano,
+    .semple,
+    .somple,
+    .simple,
+    .mono {
+        position: relative;
+    }
+
+    .sample::after,
+    .mano::after,
+    .semple::after,
+    .somple::after,
+    .simple::after,
+    .mono::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        z-index: 1;
+    }
+
+    /*BLOCK-5 ------------------------------------------------------- */
+
+    .block-5 {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        margin-top: 50px;
+    }
+
+    .korzina {
+        justify-content: center;
+        padding-top: 44px;
+        padding-bottom: 44px;
+        margin-top: 42px;
+        margin-bottom: 50px;
+
+        background-color: rgba(242, 242, 242, 1);
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 260px 260px 260px 260px;
+        grid-template-rows: 98px;
+        column-gap: 22px;
+        grid-template-areas:
+            "cup cup cup cup"
+        ;
+    }
+
+    .cup {
+        grid-area: cup;
+    }
+
+    .prev-but,
+    .next-but {
+        margin: 10px;
+        margin-top: 120px;
+    }
+
+    /* ----------------------------------------- */
+
+    .popular-products {
+        display: none;
+    }
+
+    /*BLOCK-6 ------------------------------------------------------- */
+    .uslugi {
+        display: none;
+    }
+
+    /* BLOCK-7------------------------------------------------------- */
+
+
+    .block-7 {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .bl-1 {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .bl-2 {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .bl-3 {
+        display: none;
+    }
+
+    .omag {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .button-container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    /*BLOCK-8 ------------------------------------------------------- */
+
+    .block-8 {
+        width: 100%;
+        margin-top: 74px;
+        margin-bottom: 56px;
+        background-color: #fff;
+    }
+
+
+    /* .reviews-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 31px;
+    }
+
+    .reviews {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .but-1 {
+        width: 30px;
+        margin: 170px 30px;
+    }
+
+    .but-2 {
+        width: 30px;
+        margin: 170px 15px;
+    }
+
+    .review {
+        display: flex;
+        flex-direction: column;
+        width: 519px;
+        height: 349px;
+        padding-top: 30px;
+        padding-left: 21px;
+        background-color: rgba(236, 236, 236, 1);
+    }
+
+    .revim {
+        width: 86px;
+        height: 81px;
+        margin-right: 23px;
+        float: left;
+        margin-bottom: 20px;
+    }
+
+    .review-content {
+        flex: 1;
+    }
+
+    .review-content p {
+        margin-bottom: 10px;
+        font-size: 14px;
+        padding-left: 20px;
+        width: 500px;
+    }
+
+    .rating span {
+        color: #ffcc00;
+        font-size: 18px;
+    } */
+
+
+    .reviews-header {
+        flex-direction: column;
+        /* Переключаем на вертикальное расположение */
+        align-items: flex-start;
+        /* Выравниваем элементы по левому краю */
+    }
+
+    .buttons {
+        margin-top: 10px;
+        /* Добавляем отступ между заголовком и кнопками */
+        display: flex;
+        justify-content: space-between;
+        /* Распределяем кнопки по краям */
+        width: 100%;
+        /* Ширина кнопок 100% */
+    }
+
+    .reviews {
+        flex-direction: column;
+        /* Изменяем направление флекса на колонку */
+        align-items: start;
+        /* Центрируем элементы по горизонтали */
+    }
+
+    .but-1,
+    .but-2 {
+        margin: 0px 0;
+    }
+
+    .review {
+
+        display: none;
+    }
+
+    .review-content p {
+        padding-left: 0;
+        width: auto;
+    }
+
+    .rev {
+        display: block;
+        width: 100%;
+        max-width: 340px;
+    }
+
+
+
+    /*BLOCK-9 ------------------------------------ */
+
+    .block-9 {
+        position: relative;
+        background-color: white;
+    }
+
+    .imo {
+        display: block;
+        margin: 10px auto 20px;
+    }
+
+    .blick {
+        position: absolute;
+        width: 500px;
+        height: 345px;
+        background-color: white;
+        top: 50px;
+        left: 300px;
+    }
+
+    .blick-2 {
+        margin-left: 43px;
+        margin-top: 32px;
+
+    }
+
+    .blii {
+        position: absolute;
+        width: 290px;
+        height: 42px;
+        background-color: white;
+        top: 32%;
+        left: 60%;
+    }
+
+    .blii-2 {
+        margin-left: 40px;
+        margin-top: 11px;
+    }
+
+    /* BLOCK-10------- */
+
+    .block-10 {
+        display: flex;
+        width: 100%;
+        margin-top: 31px;
+        margin-bottom: 25px;
+    }
+
+    .bl-01 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bl-01:last-child {
+        display: flex;
+        align-items: end;
+    }
+
+    last {
+        margin-left: 3px;
+        font-size: 32px;
+    }
+
+    .bl-01 p {
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+
+    .bl-01 u {
+        font-size: 15px;
+        padding-bottom: 20px;
+    }
+
+    /*  */
+    /*  */
+    /* FOOTER----------------------------------------------- */
+    .niz {
+        justify-content: center;
+        margin-top: 12px;
+        margin-bottom: 50px;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 55% 45%;
+        grid-template-rows: 30px;
+        column-gap: 22px;
+        grid-template-areas:
+            "nazv cnopka";
+    }
+
+    .cnopka {
+        grid-area: cnopka;
+        font-size: 18px;
+    }
+
+}
+
+
+/* Планшетная версия */
+@media (min-width: 361px) and (max-width: 800px) {
+
+    /* BURGER */
+
+    .hamburger {
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .catalog-button {
+        display: flex;
+        margin-top: 0px;
+        justify-content: space-between;
+    }
+
+    .ho {
+        width: auto;
+    }
+
+    .header-menu {
+        display: none;
+    }
+
+    /*  */
+
+
+    .container {
+        width: 750px;
+        margin: 0 auto;
+    }
+
+
+    .wrapper {
+        min-height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    under_nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1px;
+        padding-bottom: 20px;
+    }
+
+    .group1 {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        margin-right: 10px;
+    }
+
+    .text-group p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .group2 {
+        display: flex;
+        align-items: center;
+    }
+
+    .phone {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    /* MAIN------------------------------------------------------- */
+    .page {
+        flex: 1 1 auto;
+    }
+
+
+    /* -------------------------------------- */
+
+    .flex-images {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: rgba(196, 196, 196, 1);
+    }
+
+    .image-container {
+        position: relative;
+    }
+
+    .image-wrapper {
+        position: relative;
+    }
+
+    .image-wrapper img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding-left: 25px;
+        padding-top: 15px;
+    }
+
+    .ser {
+        font-size: 18px;
+        background-color: rgba(184, 184, 184, 1);
+        padding: 5px 20px;
+        margin-top: 40px;
+        margin-left: -25px;
+        width: fit-content;
+    }
+
+    .prev-button,
+    .next-button {
+        margin: 5px;
+    }
+
+    /* ------------------------------------------------------- */
+    .main-banner {
+        display: flex;
+        align-items: center;
+        background-color: #727270;
+        background-size: cover;
+        background-position: center;
+        height: 81px;
+    }
+
+    .cat {
+        background-color: rgba(196, 196, 196, 1);
+        padding: 10px 20px 10px 10px;
+    }
+
+    .poisk {
+        height: 30px;
+        width: 310px;
+        background-color: rgba(196, 196, 196, 1);
+        margin-left: -50px;
+    }
+
+    .block-1 {
+        position: relative;
+        background-image: url('Image/Group 257.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 450px;
+    }
+
+    .main-block_title {
+        font-size: 24px;
+        line-height: 137%;
+        font-weight: 800;
+        color: white;
+    }
+
+    .main-block_title-2 {
+        font-size: 38px;
+        font-weight: 800;
+        color: white;
+        max-width: 800px;
+    }
+
+    .main-block_body {
+        padding: 155px 0px 20px;
+        position: relative;
+        z-index: 2;
+        color: white;
+    }
+
+    .buttn {
+        margin-top: 80px;
+    }
+
+    .buttn a {
+        background: #C4C4C4;
+        padding: 15px 20px;
+        transition: all 500ms ease;
+
+    }
+
+    .main-block_but {
+        font-size: 22px;
+        padding: 10px 20px;
+    }
+
+    .main-block_but:hover {
+        background: #898989;
+    }
+
+    .te {
+        display: none;
+    }
+
+    /*KATALOG ------------------------------------ */
+
+    .katalog {
+        justify-content: start;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 359px 359px;
+        grid-template-rows: 40px 183px 70px;
+        column-gap: 20px;
+        row-gap: 20px;
+        grid-template-areas:
+            "nothing in_kat "
+            "plit cer "
+            "smesi baget ";
+    }
+
+    .nothing {
+        grid-area: nothing;
+        background: white;
+        font-size: 28px;
+    }
+
+    .in_kat {
+        grid-area: in_kat;
+        justify-self: end;
+    }
+
+    .baton {
+        background: #C4C4C4;
+        padding: 15px 25px;
+    }
+
+    .plit {
+        grid-area: plit;
+        background: rgba(196, 196, 196, 1);
+    }
+
+    .cer {
+        grid-area: cer;
+        background: rgba(196, 196, 196, 1);
+    }
+
+
+    .smesi {
+        grid-area: smesi;
+        background: rgba(196, 196, 196, 1);
+    }
+
+    .baget {
+        grid-area: baget;
+        background: rgba(196, 196, 196, 1);
+    }
+
+
+    .big_text {
+
+        font-size: 22px;
+        margin-left: 25px;
+        margin-top: 32%;
+    }
+
+    .small_text {
+        font-size: 14px;
+        margin-left: 25px;
+        margin-top: 1.5%;
+    }
+
+    .sred_text {
+        font-size: 20px;
+        margin-left: 25px;
+        margin-top: 6%;
+    }
+
+    /* BREND------------------------------------------------------------------ */
+    /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    .brend {
+        justify-content: center;
+        padding-top: 44px;
+        padding-bottom: 44px;
+        margin-top: 42px;
+        margin-bottom: 50px;
+
+        background-color: rgba(244, 244, 244, 1);
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 98px 98px 98px 98px 98px 98px 98px 98px 98px;
+        grid-template-rows: 98px;
+        column-gap: 10px;
+        grid-template-areas:
+            "brend-n brend-n brend-n brend-n brend-n brend-n brend-n brend-n brend-n";
+    }
+
+    .brend-n {
+        grid-area: brend-n;
+        height: auto;
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .brendik {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+        margin-top: 50px;
+    }
+
+    .prev-but {
+        margin: 10px;
+        margin-top: 10px;
+        height: 30px;
+        width: 30px;
+    }
+
+    .next-but {
+        margin: 10px;
+        margin-top: 10px;
+        height: 30px;
+        width: 30px;
+    }
+
+    /*BLOCK-2 -------------------------------------------------------------------- */
+
+    .block-2 {
+        background-color: white;
+        margin-top: 40px;
+    }
+
+    nav_us {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    nav_us ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        margin-top: 50px;
+    }
+
+    nav_us ul li {
+        display: flex;
+        align-items: center;
+    }
+
+    nav_us ul li img {
+        margin-right: 10px;
+    }
+
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        width: 100px;
+    }
+
+    .pod {
+        display: none;
+    }
+
+    /*BLOCK-3 -------------------------------------------------------------------- */
+
+    .block-3 {
+        background-color: rgba(244, 244, 244, 1);
+
+    }
+
+    .novinki {
+        grid-template-columns: 359px 359px;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "nov vsenov"
+            "first second"
+            "big-first big-first";
+        row-gap: 20px;
+        column-gap: 10px;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+    }
+
+    .nov {
+        grid-area: nov;
+        font-size: 28px;
+        margin-top: 40px;
+    }
+
+    .vsebaton {
+        background: #C4C4C4;
+        padding: 13px 25px;
+    }
+
+    .vsenov {
+        grid-area: vsenov;
+        justify-self: end;
+        margin-top: 40px;
+
+    }
+
+    .first {
+        grid-area: first;
+        height: auto;
+        position: relative;
+    }
+
+    .big-first {
+
+        grid-area: big-first;
+        height: auto;
+        position: relative;
+    }
+
+    .second {
+        grid-area: second;
+        height: auto;
+        position: relative;
+    }
+
+    .first img,
+    .second img,
+    .big-first img {
+        width: auto;
+        height: auto;
+
+    }
+
+    .heart {
+        position: absolute;
+        top: 14px;
+        right: 16px;
+    }
+
+    .country {
+        float: left;
+        margin: 5px;
+    }
+
+    .bigotexo {
+        font-size: 22px;
+    }
+
+    .text-overlay p {
+        margin: 6px;
+    }
+
+    .first,
+    .second,
+    .big-first {
+        position: relative;
+
+    }
+
+    .first::after,
+    .second::after,
+    .big-first::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        z-index: 1;
+    }
+
+    .text-overlay {
+        position: absolute;
+        bottom: 24px;
+        font-size: 14px;
+        left: 24px;
+        color: white;
+        z-index: 2;
+    }
+
+
+    /*BLOCK-4 ------------------------------------------------------- */
+    .block-4 {
+        background-color: rgb(255, 255, 255);
+        margin-top: 47px;
+    }
+
+    .popularity {
+        justify-content: start;
+        margin-left: 10px;
+        padding-bottom: 40px;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 359px 359px;
+        grid-template-rows: 40px 233px 233px 233px;
+
+        column-gap: 28px;
+        row-gap: 40px;
+        grid-template-areas:
+            "popu popu"
+            "sample mono "
+            "somple mano "
+            "simple semple"
+        ;
+    }
+
+    .popu {
+        grid-area: popu;
+        font-size: 28px;
+    }
+
+    .poput {
+        grid-area: poput;
+        font-size: 28px;
+    }
+
+
+    .vsekoll {
+        grid-area: vsekoll;
+        justify-self: end;
+
+    }
+
+    .vsekoli {
+        grid-area: vsekoli;
+        justify-self: end;
+
+    }
+
+    .sample {
+        grid-area: sample;
+        height: auto;
+        position: relative;
+    }
+
+    .mono {
+        grid-area: mono;
+        height: auto;
+        position: relative;
+    }
+
+    .simple {
+        grid-area: simple;
+        height: auto;
+        position: relative;
+    }
+
+    .somple {
+        grid-area: somple;
+        height: auto;
+        position: relative;
+    }
+
+    .semple {
+        grid-area: semple;
+        height: auto;
+        position: relative;
+    }
+
+    .mano {
+        grid-area: mano;
+        height: auto;
+        position: relative;
+    }
+
+    .sample,
+    .mano,
+    .semple,
+    .somple,
+    .simple,
+    .mono {
+        position: relative;
+    }
+
+    .sample::after,
+    .mano::after,
+    .semple::after,
+    .somple::after,
+    .simple::after,
+    .mono::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        z-index: 1;
+    }
+
+    /*BLOCK-5 ------------------------------------------------------- */
+
+    .block-5 {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        margin-top: 50px;
+    }
+
+    .korzina {
+        justify-content: center;
+        padding-top: 44px;
+        padding-bottom: 44px;
+        margin-top: 42px;
+        margin-bottom: 50px;
+
+        background-color: rgba(242, 242, 242, 1);
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 260px 260px 260px 260px;
+        grid-template-rows: 98px;
+        column-gap: 22px;
+        grid-template-areas:
+            "cup cup cup cup"
+        ;
+    }
+
+    .cup {
+        grid-area: cup;
+    }
+
+    .prev-but,
+    .next-but {
+        margin: 10px;
+        margin-top: 120px;
+    }
+
+    /* ----------------------------------------- */
+
+    .popular-products {
+        width: 100%;
+        height: 603px;
+        display: flex;
+        justify-content: center;
+        background-color: rgba(242, 242, 242, 1);
+        padding: 20px;
+    }
+
+    .product {
+        position: relative;
+        width: 100%;
+        height: 360px;
+        margin: auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+        background-color: white;
+    }
+
+    .product-00 {
+        width: 260px;
+        height: 360px;
+        margin: 1%;
+        vertical-align: top;
+        margin-top: 30px;
+    }
+
+    .product-info {
+        text-align: center;
+    }
+
+    .product-info p {
+        margin: 5px 0;
+    }
+
+
+    .price-cart {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: rgba(196, 196, 196, 1);
+        padding: 10px;
+    }
+
+    .price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 25px;
+    }
+
+    .old-price {
+        text-decoration: line-through;
+        font-size: 14px;
+    }
+
+    .add-to-cart {
+        background-color: rgba(255, 218, 218, 1);
+        color: rgba(243, 79, 79, 1);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .add-to-cart:hover {
+        background-color: rgba(243, 79, 79, 1);
+        color: rgba(255, 218, 218, 1);
+    }
+
+    .hea {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .products-container {
+        display: flex;
+        gap: 20px;
+    }
+
+    /*BLOCK-6 ------------------------------------------------------- */
+
+    .block-6 {
+        display: flex;
+        column-gap: 40px;
+        width: 100%;
+    }
+
+    .block {
+        background-color: rgba(196, 196, 196, 1);
+        width: 282px;
+        height: 204px;
+        margin-top: 52px;
+    }
+
+    .block-bottom {
+        background-color: rgba(196, 196, 196, 1);
+        width: 282px;
+        height: 204px;
+        margin-top: 31px;
+        margin-bottom: 388px;
+    }
+
+    .us_text {
+        padding-top: 142px;
+        padding-left: 19px;
+        width: 240px;
+
+    }
+
+    .usu_text {
+        padding-top: 129px;
+        padding-left: 19px;
+        width: 240px;
+
+    }
+
+    /* BLOCK-7------------------------------------------------------- */
+
+    .block-7 {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .bl-1,
+    .bl-2 {
+        width: 50%;
+        height: auto;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .cl {
+        display: none;
+    }
+
+    /*BLOCK-8 ------------------------------------------------------- */
+
+    .block-8 {
+        width: 100%;
+        margin-top: 74px;
+        margin-bottom: 56px;
+        background-color: #fff;
+    }
+
+    .reviews-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 31px;
+    }
+
+    .reviews {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .but-1 {
+        width: 30px;
+        margin: 170px 30px;
+    }
+
+    .but-2 {
+        width: 30px;
+        margin: 170px 15px;
+    }
+
+    .revim {
+        width: 86px;
+        height: 81px;
+        margin-right: 23px;
+        float: left;
+        margin-bottom: 20px;
+    }
+
+    .review-content {
+        flex: 1;
+    }
+
+    .review-content p {
+        margin-bottom: 10px;
+        font-size: 14px;
+        padding-left: 20px;
+        width: 500px;
+    }
+
+    .rating span {
+        color: #ffcc00;
+        font-size: 18px;
+    }
+
+    .review {
+
+        display: none;
+    }
+
+    .review-content p {
+        padding-left: 0;
+        width: auto;
+    }
+
+    .rev {
+        display: block;
+        width: 100%;
+        max-width: 340px;
+    }
+
+
+    /*BLOCK-9 ------------------------------------ */
+
+    .block-9 {
+        position: relative;
+        background-color: white;
+    }
+
+    .imo {
+        display: block;
+        margin: 10px auto 20px;
+    }
+
+    .blick {
+        position: absolute;
+        width: 400px;
+        height: 300px;
+        background-color: white;
+        top: 0px;
+        left: 10px;
+    }
+
+    .blick-2 {
+        margin-left: 43px;
+        margin-top: 32px;
+
+    }
+
+    .blii {
+        position: absolute;
+        width: 290px;
+        height: 42px;
+        background-color: white;
+        top: 32%;
+        left: 60%;
+    }
+
+    .blii-2 {
+        margin-left: 40px;
+        margin-top: 11px;
+    }
+
+    /* BLOCK-10------- */
+
+    .block-10 {
+        display: flex;
+        width: 100%;
+        margin-top: 31px;
+        margin-bottom: 25px;
+    }
+
+    .bl-01 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bl-01:last-child {
+        display: flex;
+        align-items: end;
+    }
+
+    last {
+        margin-left: 3px;
+        font-size: 32px;
+    }
+
+    .bl-01 p {
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+
+    .bl-01 u {
+        font-size: 15px;
+        padding-bottom: 20px;
+    }
+
+
+    /* FOOTER----------------------------------------------- */
+    .niz {
+        justify-content: center;
+        margin-top: 12px;
+        margin-bottom: 50px;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 75% 25%;
+        grid-template-rows: 30px;
+        column-gap: 22px;
+        grid-template-areas:
+            "nazv cnopka";
+    }
+
+    .nazv {
+        grid-area: nazv;
+        font-size: 14px;
+        margin-left: 20px;
+    }
+
+    .cnopka {
+        grid-area: cnopka;
+        font-size: 18px;
+        margin-left: 20px;
+    }
+
+    .knoppop {
+        padding: 5px 25px;
+        background-color: #ffffff;
+        border: 1.5px solid black;
+        border-radius: 3px;
+    }
+}

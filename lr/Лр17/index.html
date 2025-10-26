@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №17</title>
+</head>
+
+<body>
+    <!-- ПРИМЕР 1 Использование атрибута HTML -->
+    <input value="Использование атрибута HTML" onclick="alert('Клик!')" type="button">
+    <p></p>
+    <!-- ПРИМЕР 2 ИСПОЛЬЗОВАНИЕ ФУНКЦИИ -->
+    <script>
+        function countRabbits() {
+            for (let i = 1; i <= 3; i++) {
+                alert('Кролик номер ' + i);
+            }
+        }
+    </script>
+    <input type="button" onclick="countRabbits()" value="Считать кроликов!">
+    <p></p>
+    <!-- ПРИМЕР 3 Использование свойства DOM-объекта -->
+    <input id="elem" type="button" value="Использование свойства DOM-объекта!">
+    <script>
+        elem.onclick = function () {
+            alert('Спасибо');
+        };
+    </script>
+    <p></p>
+    <!-- ПРИМЕР 4 Доступ к элементу через this -->
+    <button onclick="alert(this.innerHTML)">Нажал и нажал</button>
+    <p></p>
+    <!-- ПРИМЕР 5 Метод addEventListener -->
+    <input id="el" type="button" value="Метод addEventListener">
+    <script>
+        function handler1() {
+            alert('Спасибо!');
+        }
+        function handler2() {
+            alert('Спасибо ещё раз!');
+        }
+        const el = document.getElementById('el'); // Получаем элемент по ID
+        el.addEventListener("click", handler1); // Спасибо!
+        el.addEventListener("click", handler2); // Спасибо ещё раз!
+    </script>
+    <p></p>
+    <!-- Пример 6 Для удаления обработчика следует использовать removeEventListener: -->
+    <input id="input" type="button" value="Для удаления обработчика следует использовать removeEventListener">
+    <script>
+        function hand() {
+            alert('Спасибо!');
+        }
+        const input = document.getElementById('input'); // Получаем элемент по ID
+        input.addEventListener("click", hand);
+        // .... 
+        input.removeEventListener("click", hand); // Удаляем обработчик
+    </script>
+
+    <!-- Пример 7 Всплытие -->
+    <style>
+        form * {
+            margin: 10px;
+            border: 1px solid blue;
+        }
+    </style>
+    <form onclick="alert('form')">FORM
+        <div onclick="alert('div')">DIV
+            <p onclick="alert('p')">P</p>
+        </div>
+    </form>
+
+    <!-- Пример 8 Прекращение всплытия -->
+    <p onclick="alert('сюда всплытие не дойдёт')">
+        <button onclick="event.stopPropagation()">Прекращение всплытия</button>
+    </p>
+    <a href="ind.html">Индивидуально взято</a>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+[
+    {
+        "id": 1,
+        "name": "Creto Forza Calacatta",
+        "description": "Элегантный керамогранит. Идеально подходит для ванных комнат и кухонь.",
+        "price": 3564,
+        "image": "img/image 85.png",
+        "category": "Россия",
+        "size": "45x45см"
+    },
+    {
+        "id": 2,
+        "name": "Creto Forza Calacatta",
+        "description": "Прочный керамогранит.",
+        "price": 3564,
+        "image": "img/image 87.png",
+        "category": "Италия",
+        "size": "45x45 см"
+    },
+    {
+        "id": 3,
+        "name": "Creto Aura Light Grey",
+        "description": "Плитка с классическим орнаментом. Создает уютную атмосферу в интерьере.",
+        "price": 3564,
+        "image": "img/image 88.png",
+        "category": "Италия",
+        "size": "31x61 см"
+    },
+    {
+        "id": 4,
+        "name": "Creto Effetto Base Grey Wall",
+        "description": "Переливающаяся плитка из стекла для создания акцентных стен.",
+        "price": 3564,
+        "image": "img/image 86.png",
+        "category": "Россия",
+        "size": "25x60 см"
+    },
+    {
+        "id": 5,
+        "name": "Плитка под бетон Urban",
+        "description": "Современная плитка с текстурой бетона для лофт и индустриальных интерьеров.",
+        "price": 38,
+        "image": "https://www.oma.by/upload/Sh/imageCache/334/556/5565702.304933-medium.jpg",
+        "category": "Италия",
+        "size": "60x60 см"
+    },
+    {
+        "id": 6,
+        "name": "Испанская плитка Terracotta",
+        "description": "Теплая терракотовая плитка ручной работы с натуральной текстурой.",
+        "price": 42,
+        "image": "https://artside.com.ua/tmp/cache/images/d7/e85/1546654979-630x474-r.jpg",
+        "category": "Италия",
+        "size": "20x20 см"
+    },
+    {
+        "id": 7,
+        "name": "Мраморная плитка Calacatta",
+        "description": "Роскошная мраморная плитка с выразительными прожилками.",
+        "price": 75,
+        "image": "https://img.freepik.com/free-photo/gradient-swirls-liquid-paint_23-2148346977.jpg?semt=ais_hybrid&w=740&q=80",
+        "category": "Италия",
+        "size": "30x60 см"
+    },
+    {
+        "id": 8,
+        "name": "Субвейная плитка Metro",
+        "description": "Классическая плитка с рельефной поверхностью.",
+        "price": 32,
+        "image": "https://static.insales-cdn.com/images/products/1/4374/390369558/%D0%BF2136.png",
+        "category": "Россия",
+        "size": "15x15 см"
+    },
+    {
+        "id": 9,
+        "name": "Натуральный сланец Stone",
+        "description": "Плитка с для создания природной атмосферы.",
+        "price": 52,
+        "image": "https://toppng.com/uploads/small/11570034431j2cudtgh8uymvwavp7fyurrfsmtmrux5kshwigpqk9hu09gnckp7jjhljkaexmqnuw0pzyg3da3psgh6znvtjdpeaevpha9rofoo.jpg",
+        "category": "Россия",
+        "size": "60x60 см"
+    },
+    {
+        "id": 10,
+        "name": "Золотая мозаика Lux",
+        "description": "Эксклюзивная мозаика для создания акцентных деталей.",
+        "price": 95,
+        "image": "https://toppng.com/uploads/small/11569847223x8ocqbfetl1w6or9p9fgehgri0wysrh337saiwmpzlb28unehidqspgfzxdhicipem75xogmr8epzlzudn59spjusmripsne9rdd.jpg",
+        "category": "Италия",
+        "size": "5x5 см"
+    },
+    {
+        "id": 11,
+        "name": "Белая глянцевая плитка",
+        "description": "Классическая глянцевая плитка для ванной комнаты",
+        "price": 1200,
+        "image": "https://oboi-elysium.ru/upload/iblock/205/y92943e697gc625wbrvz4zg4vd7smt90/zelyenye_mramornye_razvody_f_142_4_0kh2_7_m.jpg",
+        "category": "Россия"
+    },
+    {
+        "id": 12,
+        "name": "Серый мрамор",
+        "description": "Элегантная плитка для гостиной",
+        "price": 1800,
+        "image": "https://textur.gas-kvas.com/uploads/posts/2024-10/textur-gas-kvas-com-gixa-p-tekstura-mramornie-razvodi-4.jpg",
+        "category": "Италия"
+    }
+]
