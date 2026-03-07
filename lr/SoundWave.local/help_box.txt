@@ -1,0 +1,3 @@
+https://soundwave.local/admin/login.php
+имя: soundwave_admin
+пароль: SoundWave2026!

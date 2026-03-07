@@ -1,0 +1,1183 @@
+/* Стили для страницы музыки */
+
+/* Герой-секция для музыки */
+.music-hero-section {
+    padding: 180px 5% 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.15) 0%, rgba(20, 20, 30, 0.9) 100%);
+    border-bottom: 1px solid rgba(147, 51, 234, 0.3);
+}
+
+.music-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.music-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.music-stat::after {
+    content: '';
+    position: absolute;
+    right: -30px;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #9333ea, transparent);
+}
+
+.music-stat:last-child::after {
+    display: none;
+}
+
+.music-stat .stat-number {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #fbbf24, #9333ea);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+}
+
+.music-stat .stat-label {
+    font-size: 1rem;
+    color: #b0b0b0;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Основной контент */
+.music-main-content {
+    padding: 60px 5%;
+    background: rgba(10, 10, 15, 0.6);
+}
+
+.music-container {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Сайдбар с фильтрами - скопировано из artists.css */
+.music-sidebar {
+    background: rgba(20, 20, 30, 0.8);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid rgba(147, 51, 234, 0.2);
+    backdrop-filter: blur(10px);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(147, 51, 234, 0.3);
+}
+
+.sidebar-header h3 {
+    color: #fbbf24;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.clear-filters {
+    background: transparent;
+    border: 1px solid #9333ea;
+    color: #9333ea;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.clear-filters:hover {
+    background: rgba(147, 51, 234, 0.2);
+    color: #fbbf24;
+    border-color: #fbbf24;
+    transform: translateY(-2px);
+}
+
+/* Аккордеон фильтров */
+.filter-accordion {
+    margin-bottom: 25px;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(147, 51, 234, 0.1);
+}
+
+.filter-header {
+    width: 100%;
+    background: rgba(30, 30, 40, 0.7);
+    border: none;
+    padding: 15px 20px;
+    color: #f0f0f0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.filter-header:hover {
+    background: rgba(147, 51, 234, 0.1);
+}
+
+.filter-header.active {
+    background: rgba(147, 51, 234, 0.2);
+    color: #fbbf24;
+}
+
+.filter-header i:first-child {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.filter-header i:last-child {
+    transition: transform 0.3s ease;
+}
+
+.filter-header.active i:last-child {
+    transform: rotate(180deg);
+}
+
+.filter-content {
+    padding: 20px;
+    display: none;
+}
+
+.filter-content.show {
+    display: block;
+}
+
+/* Стили для опций фильтров */
+.filter-search {
+    margin-bottom: 15px;
+}
+
+.filter-search input {
+    width: 100%;
+    padding: 10px 15px;
+    background: rgba(20, 20, 30, 0.8);
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.filter-search input:focus {
+    outline: none;
+    border-color: #9333ea;
+    box-shadow: 0 0 10px rgba(147, 51, 234, 0.3);
+}
+
+.filter-options {
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.filter-options::-webkit-scrollbar {
+    width: 5px;
+}
+
+.filter-options::-webkit-scrollbar-thumb {
+    background: #9333ea;
+    border-radius: 5px;
+}
+
+/* Стили для опций фильтров - фиолетовые квадратики */
+.filter-option {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-option:hover {
+    color: #fbbf24;
+}
+
+.filter-option input[type="checkbox"],
+.filter-option input[type="radio"] {
+    display: none;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #9333ea;
+    border-radius: 4px;
+    margin-right: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    background: transparent;
+}
+
+.filter-option input[type="radio"]+.checkmark {
+    border-radius: 50%;
+}
+
+.filter-option input:checked+.checkmark {
+    background: #9333ea;
+}
+
+.filter-option input:checked+.checkmark::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.filter-option input[type="radio"]:checked+.checkmark::after {
+    left: 4px;
+    top: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+}
+
+.option-label {
+    flex-grow: 1;
+    font-size: 0.95rem;
+}
+
+.option-count {
+    color: #888;
+    font-size: 0.85rem;
+    margin-left: 10px;
+}
+
+/* Активные фильтры */
+.active-filters {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(147, 51, 234, 0.3);
+}
+
+.active-filters h4 {
+    color: #fbbf24;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.filters-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-tag {
+    background: linear-gradient(90deg, rgba(147, 51, 234, 0.2), rgba(251, 191, 36, 0.1));
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    color: #f0f0f0;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-tag i {
+    color: #9333ea;
+    cursor: pointer;
+}
+
+.filter-tag i:hover {
+    color: #fbbf24;
+}
+
+/* Правая колонка - песни */
+.music-content {
+    background: rgba(20, 20, 30, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(147, 51, 234, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(147, 51, 234, 0.2);
+}
+
+.header-left h2 {
+    color: #fbbf24;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.songs-count {
+    color: #b0b0b0;
+    font-size: 1rem;
+    display: block;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Поиск песни */
+.song-search {
+    position: relative;
+    width: 300px;
+}
+
+.song-search input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    background: rgba(15, 15, 20, 0.8);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: linear-gradient(90deg, rgba(20, 20, 30, 0.9), rgba(25, 25, 35, 0.8)) padding-box,
+        linear-gradient(90deg, #9333ea, #fbbf24) border-box;
+}
+
+.song-search input:focus {
+    outline: none;
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+}
+
+.song-search i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fbbf24;
+}
+
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(20, 20, 30, 0.95);
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    border-radius: 12px;
+    margin-top: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 100;
+    display: none;
+}
+
+.suggestion-item {
+    padding: 10px 15px;
+    color: #b0b0b0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.suggestion-item:hover {
+    background: rgba(147, 51, 234, 0.2);
+    color: white;
+}
+
+/* Список песен - таблица */
+.songs-list-container {
+    overflow-x: auto;
+    margin-bottom: 40px;
+}
+
+.songs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 60px 3fr 2fr 2fr 1.5fr 80px 100px 140px;
+    padding: 15px 10px;
+    background: rgba(147, 51, 234, 0.1);
+    border-radius: 12px;
+    color: #fbbf24;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.table-body {
+    min-height: 600px;
+}
+
+.song-row {
+    display: grid;
+    grid-template-columns: 60px 3fr 2fr 2fr 1.5fr 80px 100px 140px;
+    align-items: center;
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(147, 51, 234, 0.15);
+    transition: all 0.3s ease;
+    animation: rowFadeIn 0.3s ease;
+}
+
+.song-row:hover {
+    background: rgba(147, 51, 234, 0.1);
+    border-radius: 12px;
+    transform: scale(1.002);
+}
+
+.table-col {
+    padding: 0 5px;
+}
+
+.table-col.number {
+    color: #888;
+    font-weight: 700;
+    text-align: center;
+}
+
+.table-col.title .song-title {
+    color: #f0f0f0;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.song-row:hover .song-title {
+    color: #fbbf24;
+}
+
+.table-col.artist,
+.table-col.album,
+.table-col.genre,
+.table-col.duration {
+    color: #b0b0b0;
+}
+
+.table-col.duration {
+    font-weight: 600;
+    color: #888;
+}
+
+.table-col.type {
+    display: flex;
+    align-items: center;
+}
+
+.single-badge {
+    background: rgba(147, 51, 234, 0.2);
+    color: #fbbf24;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.album-badge {
+    background: rgba(30, 30, 40, 0.8);
+    color: #b0b0b0;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.table-col.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    background: transparent;
+    border: none;
+    color: #b0b0b0;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.action-btn:hover {
+    background: #9333ea;
+    color: white;
+    transform: scale(1.1);
+}
+
+.action-btn.view-lyrics:hover {
+    background: #fbbf24;
+    color: #0a0a0f;
+}
+
+.action-btn.add-to-playlist {
+    color: #fbbf24;
+}
+
+.action-btn.add-to-playlist:hover {
+    background: #fbbf24;
+    color: #0a0a0f;
+}
+
+/* Модальное окно с текстом песни */
+.lyrics-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 10, 15, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.lyrics-modal.show {
+    display: flex;
+}
+
+.lyrics-content {
+    background: linear-gradient(135deg, #1a1a2a 0%, #2a1a3a 100%);
+    border: 2px solid #9333ea;
+    border-radius: 30px;
+    padding: 0;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 40px rgba(147, 51, 234, 0.3);
+    animation: slideUp 0.4s ease;
+}
+
+.lyrics-header {
+    background: linear-gradient(90deg, #9333ea, #fbbf24);
+    padding: 25px 30px;
+    border-radius: 28px 28px 0 0;
+    position: relative;
+    text-align: center;
+}
+
+.lyrics-header h2 {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.lyrics-header h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.lyrics-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.lyrics-close:hover {
+    background: white;
+    color: #9333ea;
+    transform: rotate(90deg) scale(1.1);
+}
+
+.lyrics-body {
+    padding: 35px 30px;
+    background: rgba(20, 20, 30, 0.9);
+    border-radius: 0 0 28px 28px;
+}
+
+.lyrics-body pre {
+    color: #f0f0f0;
+    font-size: 1rem;
+    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+}
+
+/* Пагинация */
+.pagination-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(147, 51, 234, 0.3);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pagination-info {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+}
+
+.showing-info span {
+    color: #fbbf24;
+    font-weight: 700;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.page-btn {
+    background: rgba(147, 51, 234, 0.1);
+    border: 1px solid #9333ea;
+    color: #fbbf24;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: #9333ea;
+    color: white;
+    transform: scale(1.1);
+}
+
+.page-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 8px;
+}
+
+.page-number {
+    background: rgba(25, 25, 35, 0.8);
+    border: 1px solid rgba(147, 51, 234, 0.2);
+    color: #b0b0b0;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.page-number:hover {
+    background: rgba(147, 51, 234, 0.2);
+    color: #f0f0f0;
+    border-color: #9333ea;
+}
+
+.page-number.active {
+    background: linear-gradient(90deg, #9333ea, #a855f7);
+    color: white;
+    border-color: #9333ea;
+    transform: scale(1.05);
+}
+
+.pagination-per-page {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #b0b0b0;
+}
+
+.pagination-per-page select {
+    background: rgba(25, 25, 35, 0.8);
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    color: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rowFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 1400px) {
+
+    .table-header,
+    .song-row {
+        grid-template-columns: 50px 3fr 2fr 2fr 1.5fr 70px 80px 120px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .music-container {
+        grid-template-columns: 1fr;
+    }
+
+    .music-sidebar {
+        position: static;
+    }
+
+    .table-header,
+    .song-row {
+        grid-template-columns: 40px 2.5fr 1.5fr 1.5fr 1.2fr 60px 70px 110px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .table-col.album,
+    .table-col.genre {
+        display: none;
+    }
+
+    .table-header,
+    .song-row {
+        grid-template-columns: 40px 2.5fr 1.5fr 60px 70px 110px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .header-right {
+        width: 100%;
+    }
+
+    .song-search {
+        width: 100%;
+    }
+
+    .table-col.artist,
+    .table-col.type {
+        display: none;
+    }
+
+    .table-header,
+    .song-row {
+        grid-template-columns: 30px 2fr 70px 110px;
+    }
+
+    .table-col.duration {
+        text-align: center;
+    }
+
+    .lyrics-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .lyrics-header h3 {
+        font-size: 1rem;
+    }
+
+    .lyrics-body {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .pagination-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pagination-info {
+        text-align: center;
+    }
+
+    .table-header,
+    .song-row {
+        grid-template-columns: 30px 2fr 70px 90px;
+    }
+
+    .table-col.album,
+    .table-col.genre,
+    .table-col.artist,
+    .table-col.type {
+        display: none;
+    }
+}
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+
+/* Стили для модального окна выбора плейлиста */
+#playlistSelectorModal .modal-content {
+    background: linear-gradient(135deg, #1a1a2a 0%, #2a1a3a 100%);
+    border: 2px solid #9333ea;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(147, 51, 234, 0.3);
+    animation: modalSlideIn 0.4s ease;
+}
+
+#playlistSelectorModal .modal-header {
+    background: linear-gradient(90deg, #9333ea, #fbbf24);
+    padding: 20px 30px;
+    border-radius: 28px 28px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#playlistSelectorModal .modal-header h3 {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#playlistSelectorModal .modal-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+#playlistSelectorModal .modal-close:hover {
+    background: white;
+    color: #9333ea;
+    transform: rotate(90deg) scale(1.1);
+}
+
+#playlistSelectorModal .modal-body {
+    padding: 25px 30px;
+    background: rgba(20, 20, 30, 0.9);
+}
+
+#playlistSelectorModal .modal-body p {
+    color: #f0f0f0;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(147, 51, 234, 0.1);
+    border-radius: 12px;
+    border-left: 4px solid #fbbf24;
+}
+
+#playlistSelectorModal .modal-body p span {
+    color: #fbbf24;
+    font-weight: 700;
+}
+
+#playlistSelectorModal .modal-footer {
+    padding: 20px 30px;
+    background: rgba(20, 20, 30, 0.95);
+    border-top: 1px solid rgba(147, 51, 234, 0.2);
+    border-radius: 0 0 28px 28px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#playlistSelectorModal .btn-outline {
+    background: transparent;
+    border: 2px solid #9333ea;
+    color: #f0f0f0;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#playlistSelectorModal .btn-outline:hover {
+    background: rgba(147, 51, 234, 0.2);
+    border-color: #fbbf24;
+    transform: translateY(-2px);
+}
+
+/* Стили для списка плейлистов */
+#playlistSelectorModal .playlists-list {
+    max-height: 350px;
+    overflow-y: auto;
+    padding: 5px;
+    margin-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #9333ea #1a1a2a;
+}
+
+#playlistSelectorModal .playlists-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#playlistSelectorModal .playlists-list::-webkit-scrollbar-track {
+    background: #1a1a2a;
+    border-radius: 10px;
+}
+
+#playlistSelectorModal .playlists-list::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #9333ea, #fbbf24);
+    border-radius: 10px;
+}
+
+#playlistSelectorModal .playlist-select-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(30, 30, 40, 0.7);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    backdrop-filter: blur(5px);
+}
+
+#playlistSelectorModal .playlist-select-item:hover {
+    background: rgba(147, 51, 234, 0.2);
+    border-color: #fbbf24;
+    transform: translateX(8px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(251, 191, 36, 0.2);
+}
+
+#playlistSelectorModal .playlist-select-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid #9333ea;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+#playlistSelectorModal .playlist-select-item:hover .playlist-select-cover {
+    border-color: #fbbf24;
+    transform: scale(1.05);
+}
+
+#playlistSelectorModal .playlist-select-info {
+    flex: 1;
+}
+
+#playlistSelectorModal .playlist-select-name {
+    color: #f0f0f0;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+#playlistSelectorModal .playlist-select-item:hover .playlist-select-name {
+    color: #fbbf24;
+}
+
+#playlistSelectorModal .playlist-select-count {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#playlistSelectorModal .playlist-select-count::before {
+    content: '🎵';
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+#playlistSelectorModal .playlist-select-icon {
+    color: #fbbf24;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+#playlistSelectorModal .playlist-select-item:hover .playlist-select-icon {
+    transform: scale(1.2) rotate(90deg);
+    opacity: 1;
+    color: #9333ea;
+}
+
+/* Анимация для модального окна */
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Стили для ссылки создания плейлиста */
+#playlistSelectorModal .playlists-list a {
+    color: #fbbf24;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(147, 51, 234, 0.2);
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+#playlistSelectorModal .playlists-list a:hover {
+    background: rgba(147, 51, 234, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(147, 51, 234, 0.3);
+}
